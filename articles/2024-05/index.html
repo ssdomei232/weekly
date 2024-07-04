@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="1 OpenAI的GPT-4可以通过阅读安全公告来利用实际存在的漏洞有学者指出，结合大型语言模型与自动化软件的人工智能代理能够通过阅读安全公告，成功利用现实世界中的安全漏洞。在最新发布的一篇论文中，来自伊利诺伊大学厄巴纳-香槟分校（UIUC）的四位计算机科学家称，OpenAI的GPT-4大型语言模型（LLM）如果获得描述该缺陷的CVE公告，就能自主地利用现实系统中的漏洞。作者们在论文中解释道：“为">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复">
+<meta property="og:url" content="https://weekly.linuxcat.top/articles/2024-05/index.html">
+<meta property="og:site_name" content="Linuxcat周刊">
+<meta property="og:description" content="1 OpenAI的GPT-4可以通过阅读安全公告来利用实际存在的漏洞有学者指出，结合大型语言模型与自动化软件的人工智能代理能够通过阅读安全公告，成功利用现实世界中的安全漏洞。在最新发布的一篇论文中，来自伊利诺伊大学厄巴纳-香槟分校（UIUC）的四位计算机科学家称，OpenAI的GPT-4大型语言模型（LLM）如果获得描述该缺陷的CVE公告，就能自主地利用现实系统中的漏洞。作者们在论文中解释道：“为">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-04-21T12:46:47.000Z">
+<meta property="article:modified_time" content="2024-07-04T09:08:12.902Z">
+<meta property="article:author" content="mei">
+<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="OpenAI">
+<meta property="article:tag" content="存储">
+<meta property="article:tag" content="谷歌">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+        
+      
+    
+    <!-- title -->
+    <title>Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Linuxcat周刊" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li><!--
+     --><!--
+       --><li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/articles/2024-06/index.html"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/articles/2024-04/index.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://weekly.linuxcat.top/articles/2024-05/index.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://weekly.linuxcat.top/articles/2024-05/index.html&text=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://weekly.linuxcat.top/articles/2024-05/index.html&title=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://weekly.linuxcat.top/articles/2024-05/index.html&is_video=false&description=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复&body=Check out this article: https://weekly.linuxcat.top/articles/2024-05/index.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://weekly.linuxcat.top/articles/2024-05/index.html&title=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://weekly.linuxcat.top/articles/2024-05/index.html&title=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://weekly.linuxcat.top/articles/2024-05/index.html&title=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://weekly.linuxcat.top/articles/2024-05/index.html&title=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://weekly.linuxcat.top/articles/2024-05/index.html&name=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://weekly.linuxcat.top/articles/2024-05/index.html&t=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-OpenAI%E7%9A%84GPT-4%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E9%98%85%E8%AF%BB%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A%E6%9D%A5%E5%88%A9%E7%94%A8%E5%AE%9E%E9%99%85%E5%AD%98%E5%9C%A8%E7%9A%84%E6%BC%8F%E6%B4%9E"><span class="toc-number">1.</span> <span class="toc-text">1 OpenAI的GPT-4可以通过阅读安全公告来利用实际存在的漏洞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Logitech%E6%8E%A8%E5%87%BA%E5%85%8D%E8%B4%B9%E7%9A%84ChatGPT%E6%8F%90%E7%A4%BA%E5%B7%A5%E5%85%B7%E4%BB%A5%E5%8F%8A%E4%B8%80%E6%AC%BE%E5%B8%A6%E6%9C%89%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%8C%89%E9%92%AE%E7%9A%84%E9%BC%A0%E6%A0%87"><span class="toc-number">2.</span> <span class="toc-text">2 Logitech推出免费的ChatGPT提示工具以及一款带有人工智能按钮的鼠标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%A5%BF%E9%83%A8%E6%95%B0%E6%8D%AE%E5%8F%91%E5%B8%83-Ultrastar-Transporter-368TB%E7%9A%84%E6%89%8B%E6%8F%90%E7%AE%B1%E5%AD%98%E5%82%A8"><span class="toc-number">3.</span> <span class="toc-text">3 西部数据发布 Ultrastar Transporter 368TB的手提箱存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Google-Maps-%E5%B0%86%E5%88%A9%E7%94%A8%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%88AI%EF%BC%89%E6%8A%80%E6%9C%AF%E6%9D%A5%E5%B8%AE%E5%8A%A9%E7%94%B5%E5%8A%A8%E6%B1%BD%E8%BD%A6%EF%BC%88EV%EF%BC%89%E9%A9%BE%E9%A9%B6%E5%91%98%E5%8F%91%E7%8E%B0%E4%B8%8D%E5%A4%AA%E6%98%8E%E6%98%BE%E7%9A%84%E5%85%85%E7%94%B5%E7%AB%99"><span class="toc-number">4.</span> <span class="toc-text">4 Google Maps 将利用人工智能（AI）技术来帮助电动汽车（EV）驾驶员发现不太明显的充电站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%BE%8E%E5%9B%BD%E7%A9%BA%E5%86%9B%E8%A1%A8%E7%A4%BA%EF%BC%8CAI%E6%8E%A7%E5%88%B6%E7%9A%84F-16%E6%88%98%E6%96%97%E6%9C%BA%E5%B7%B2%E4%B8%8E%E4%BA%BA%E7%B1%BB%E8%BF%9B%E8%A1%8C%E7%A9%BA%E6%88%98%E5%AF%B9%E6%8A%97"><span class="toc-number">5.</span> <span class="toc-text">5 美国空军表示，AI控制的F-16战斗机已与人类进行空战对抗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%9F%A5%E5%90%8DNAS%E7%B3%BB%E7%BB%9F%E6%9A%97%E8%97%8F%E5%90%8E%E9%97%A8-%E5%AE%98%E6%96%B9%E8%A1%A8%E7%A4%BA%E4%B8%8D%E4%BA%88%E4%BF%AE%E5%A4%8D"><span class="toc-number">6.</span> <span class="toc-text">6 知名NAS系统暗藏后门,官方表示不予修复</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%B0%B7%E6%AD%8C%E4%B8%BA%E4%BA%86%E7%BB%93%E9%9B%86%E4%BD%93%E8%AF%89%E8%AE%BC%EF%BC%8C%E5%90%8C%E6%84%8F%E5%88%A0%E9%99%A4-Chrome-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%97%95%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%94%B6%E9%9B%86%E7%9A%84%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE"><span class="toc-number">7.</span> <span class="toc-text">7 谷歌为了结集体诉讼，同意删除 Chrome 浏览器无痕模式下收集的用户数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Akira-%E6%94%B6%E5%8F%96%E4%BA%86-4200-%E4%B8%87%E7%BE%8E%E5%85%83%E7%9A%84%E8%B5%8E%E9%87%91%EF%BC%8C%E7%8E%B0%E5%9C%A8%E7%9E%84%E5%87%86-Linux-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">8.</span> <span class="toc-text">8 Akira 收取了 4200 万美元的赎金，现在瞄准 Linux 服务器</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">mei</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-04-21T12:46:47.000Z" class="dt-published" itemprop="datePublished">2024-04-21</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">Linuxcat周刊</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Linux/" rel="tag">Linux</a>, <a class="p-category" href="/tags/OpenAI/" rel="tag">OpenAI</a>, <a class="p-category" href="/tags/%E5%AD%98%E5%82%A8/" rel="tag">存储</a>, <a class="p-category" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a>, <a class="p-category" href="/tags/%E8%B0%B7%E6%AD%8C/" rel="tag">谷歌</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="1-OpenAI的GPT-4可以通过阅读安全公告来利用实际存在的漏洞"><a href="#1-OpenAI的GPT-4可以通过阅读安全公告来利用实际存在的漏洞" class="headerlink" title="1 OpenAI的GPT-4可以通过阅读安全公告来利用实际存在的漏洞"></a>1 OpenAI的GPT-4可以通过阅读安全公告来利用实际存在的漏洞</h2><p>有学者指出，结合大型语言模型与自动化软件的人工智能代理能够通过阅读安全公告，成功利用现实世界中的安全漏洞。在最新发布的一篇论文中，来自伊利诺伊大学厄巴纳-香槟分校（UIUC）的四位计算机科学家称，OpenAI的GPT-4大型语言模型（LLM）如果获得描述该缺陷的CVE公告，就能自主地利用现实系统中的漏洞。<br>作者们在论文中解释道：“为了证明这一点，我们收集了一组包含被CVE描述归类为‘严重’等级的15个一日漏洞数据集。当给定CVE描述时，GPT-4能够利用其中87%的漏洞，而我们测试的其他所有模型（GPT-3.5、开源LLM）以及开源漏洞扫描器（ZAP和Metasploit）的成功率为0%。”<br>Kang及其同事计算了成功实施LLM代理攻击的成本，得出的数字为每起攻击8.80美元，他们表示这大约比雇佣人类渗透测试员工作30分钟的成本低2.8倍。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theregister.com/2024/04/17/gpt4_can_exploit_real_vulnerabilities/">The Register</a></p>
+</blockquote>
+<h2 id="2-Logitech推出免费的ChatGPT提示工具以及一款带有人工智能按钮的鼠标"><a href="#2-Logitech推出免费的ChatGPT提示工具以及一款带有人工智能按钮的鼠标" class="headerlink" title="2 Logitech推出免费的ChatGPT提示工具以及一款带有人工智能按钮的鼠标"></a>2 Logitech推出免费的ChatGPT提示工具以及一款带有人工智能按钮的鼠标</h2><p>罗技公司近日推出一款免费软件工具，旨在帮助使用其设备的现有用户创建ChatGPT提示。而对于即将推出的Signature AI Edition鼠标购买者而言，他们还将获得一个专门的AI提示按钮。这一举措出自一家通常与外设产品关联的企业，显得有些奇特，像是在赶时髦。虽然将某些人现今可能称为人工智能的算法应用于提升噪音消除或图像处理是件好事，但在鼠标上设置一个触发ChatGPT对话以创建提示的按钮却显得有些多余，就像Copilot键一样。   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theregister.com/2024/04/17/logitech_introduces_ai_prompt_tool/">The Register</a></p>
+</blockquote>
+<h2 id="3-西部数据发布-Ultrastar-Transporter-368TB的手提箱存储"><a href="#3-西部数据发布-Ultrastar-Transporter-368TB的手提箱存储" class="headerlink" title="3 西部数据发布 Ultrastar Transporter 368TB的手提箱存储"></a>3 西部数据发布 Ultrastar Transporter 368TB的手提箱存储</h2><p>西数在 NAB 大会上，带来一款有意思的产品，叫 Ultrastar Transporter，带手提箱，官方称其是“很特别的 SSD”。<br>其配置有 368TB 的 NVMe 快闪存储空间和双接口 200GbE 以太网端口,包含带轮子的运输箱，方便从一个地点运输到另一个地点,还可以通过提手运输   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.westerndigital.com/zh-tw/products/data-center-platforms/ultrastar-transporter?sku=1ES2562">西部数据</a></p>
+</blockquote>
+<h2 id="4-Google-Maps-将利用人工智能（AI）技术来帮助电动汽车（EV）驾驶员发现不太明显的充电站"><a href="#4-Google-Maps-将利用人工智能（AI）技术来帮助电动汽车（EV）驾驶员发现不太明显的充电站" class="headerlink" title="4 Google Maps 将利用人工智能（AI）技术来帮助电动汽车（EV）驾驶员发现不太明显的充电站"></a>4 Google Maps 将利用人工智能（AI）技术来帮助电动汽车（EV）驾驶员发现不太明显的充电站</h2><p>Google Maps 正在推出一系列新更新，旨在减轻寻找电动汽车充电站的压力。为此，它将（当然）大量依赖人工智能。<br>Google 表示，将利用人工智能来汇总 EV 充电站的用户评价，以显示前往特定充电站（如位于停车场或较难找寻地点的充电站）的更具体指示。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theverge.com/2024/4/17/24132254/google-maps-ev-charging-directions-ai-summaries">The Verge</a></p>
+</blockquote>
+<h2 id="5-美国空军表示，AI控制的F-16战斗机已与人类进行空战对抗"><a href="#5-美国空军表示，AI控制的F-16战斗机已与人类进行空战对抗" class="headerlink" title="5 美国空军表示，AI控制的F-16战斗机已与人类进行空战对抗"></a>5 美国空军表示，AI控制的F-16战斗机已与人类进行空战对抗</h2><p>美国空军试飞员学校和国防高级研究计划局（DARPA）声称，在人工智能软件操控改装版F-16战斗机与人类飞行员进行空中格斗演示方面取得了机器学习的重大突破。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theregister.com/2024/04/18/darpa_f16_flight/">The Register</a></p>
+</blockquote>
+<h2 id="6-知名NAS系统暗藏后门-官方表示不予修复"><a href="#6-知名NAS系统暗藏后门-官方表示不予修复" class="headerlink" title="6 知名NAS系统暗藏后门,官方表示不予修复"></a>6 知名NAS系统暗藏后门,官方表示不予修复</h2><p>近日,有网友发现,Dlink的部分NAS型号的系统中内置一个无密码账户messagebus,且NAS系统中有多种机制来防止此用用户被删除.<br>目前,全球有多达九万两千台暴露在公网中的该型号NAS,而Dlink官方则表示产品已超过服务期限,不予修复</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1qm411U7wX/">Epcdiy</a></p>
+</blockquote>
+<h2 id="7-谷歌为了结集体诉讼，同意删除-Chrome-浏览器无痕模式下收集的用户数据"><a href="#7-谷歌为了结集体诉讼，同意删除-Chrome-浏览器无痕模式下收集的用户数据" class="headerlink" title="7 谷歌为了结集体诉讼，同意删除 Chrome 浏览器无痕模式下收集的用户数据"></a>7 谷歌为了结集体诉讼，同意删除 Chrome 浏览器无痕模式下收集的用户数据</h2><p>4 月 2 日消息，根据华尔街日报报道，谷歌为了结追溯到 2020 年的集体诉讼案，近日同意删除通过 Chrome 浏览器“无痕（Incognito）模式”下收集的用户数据。<br>这起诉讼原告认为，谷歌对于“无痕（Incognito）模式”的介绍存在误导性描述，让用户在不知情的情况下，被网站追踪其使用情况。<br>谷歌今天还表示销毁这些“不当收集”的“数十亿个数据点”，还将更新 “隐身” 模式的措辞，并在使用该功能时默认禁用第三方 Cookie（谷歌计划在今年晚些时候完全禁用 Cookie）。</p>
+<blockquote>
+<p>消息来源: IT之家</p>
+</blockquote>
+<h2 id="8-Akira-收取了-4200-万美元的赎金，现在瞄准-Linux-服务器"><a href="#8-Akira-收取了-4200-万美元的赎金，现在瞄准-Linux-服务器" class="headerlink" title="8 Akira 收取了 4200 万美元的赎金，现在瞄准 Linux 服务器"></a>8 Akira 收取了 4200 万美元的赎金，现在瞄准 Linux 服务器</h2><p>欧洲及美国四大顶尖网络安全机构于4月18日联合发布的一份咨询报告指出，Akira 勒索软件团伙在过去一年内从超过250家组织手中勒索得手总计4200万美元。<br>这份报告指出，Akira 现在不仅针对 Windows 系统，还对 Linux 服务器发起攻击，发布方包括美国网络安全与基础设施安全局（CISA）、联邦调查局（FBI）、欧洲刑警组织欧洲网络犯罪中心以及荷兰国家网络安全中心。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.scmagazine.com/news/akira-takes-in-42-million-in-ransom-payments-now-targets-linux-servers">SC杂志</a></p>
+</blockquote>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li>
+        
+          <li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-OpenAI%E7%9A%84GPT-4%E5%8F%AF%E4%BB%A5%E9%80%9A%E8%BF%87%E9%98%85%E8%AF%BB%E5%AE%89%E5%85%A8%E5%85%AC%E5%91%8A%E6%9D%A5%E5%88%A9%E7%94%A8%E5%AE%9E%E9%99%85%E5%AD%98%E5%9C%A8%E7%9A%84%E6%BC%8F%E6%B4%9E"><span class="toc-number">1.</span> <span class="toc-text">1 OpenAI的GPT-4可以通过阅读安全公告来利用实际存在的漏洞</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Logitech%E6%8E%A8%E5%87%BA%E5%85%8D%E8%B4%B9%E7%9A%84ChatGPT%E6%8F%90%E7%A4%BA%E5%B7%A5%E5%85%B7%E4%BB%A5%E5%8F%8A%E4%B8%80%E6%AC%BE%E5%B8%A6%E6%9C%89%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%8C%89%E9%92%AE%E7%9A%84%E9%BC%A0%E6%A0%87"><span class="toc-number">2.</span> <span class="toc-text">2 Logitech推出免费的ChatGPT提示工具以及一款带有人工智能按钮的鼠标</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E8%A5%BF%E9%83%A8%E6%95%B0%E6%8D%AE%E5%8F%91%E5%B8%83-Ultrastar-Transporter-368TB%E7%9A%84%E6%89%8B%E6%8F%90%E7%AE%B1%E5%AD%98%E5%82%A8"><span class="toc-number">3.</span> <span class="toc-text">3 西部数据发布 Ultrastar Transporter 368TB的手提箱存储</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Google-Maps-%E5%B0%86%E5%88%A9%E7%94%A8%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%88AI%EF%BC%89%E6%8A%80%E6%9C%AF%E6%9D%A5%E5%B8%AE%E5%8A%A9%E7%94%B5%E5%8A%A8%E6%B1%BD%E8%BD%A6%EF%BC%88EV%EF%BC%89%E9%A9%BE%E9%A9%B6%E5%91%98%E5%8F%91%E7%8E%B0%E4%B8%8D%E5%A4%AA%E6%98%8E%E6%98%BE%E7%9A%84%E5%85%85%E7%94%B5%E7%AB%99"><span class="toc-number">4.</span> <span class="toc-text">4 Google Maps 将利用人工智能（AI）技术来帮助电动汽车（EV）驾驶员发现不太明显的充电站</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-%E7%BE%8E%E5%9B%BD%E7%A9%BA%E5%86%9B%E8%A1%A8%E7%A4%BA%EF%BC%8CAI%E6%8E%A7%E5%88%B6%E7%9A%84F-16%E6%88%98%E6%96%97%E6%9C%BA%E5%B7%B2%E4%B8%8E%E4%BA%BA%E7%B1%BB%E8%BF%9B%E8%A1%8C%E7%A9%BA%E6%88%98%E5%AF%B9%E6%8A%97"><span class="toc-number">5.</span> <span class="toc-text">5 美国空军表示，AI控制的F-16战斗机已与人类进行空战对抗</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E7%9F%A5%E5%90%8DNAS%E7%B3%BB%E7%BB%9F%E6%9A%97%E8%97%8F%E5%90%8E%E9%97%A8-%E5%AE%98%E6%96%B9%E8%A1%A8%E7%A4%BA%E4%B8%8D%E4%BA%88%E4%BF%AE%E5%A4%8D"><span class="toc-number">6.</span> <span class="toc-text">6 知名NAS系统暗藏后门,官方表示不予修复</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E8%B0%B7%E6%AD%8C%E4%B8%BA%E4%BA%86%E7%BB%93%E9%9B%86%E4%BD%93%E8%AF%89%E8%AE%BC%EF%BC%8C%E5%90%8C%E6%84%8F%E5%88%A0%E9%99%A4-Chrome-%E6%B5%8F%E8%A7%88%E5%99%A8%E6%97%A0%E7%97%95%E6%A8%A1%E5%BC%8F%E4%B8%8B%E6%94%B6%E9%9B%86%E7%9A%84%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE"><span class="toc-number">7.</span> <span class="toc-text">7 谷歌为了结集体诉讼，同意删除 Chrome 浏览器无痕模式下收集的用户数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-Akira-%E6%94%B6%E5%8F%96%E4%BA%86-4200-%E4%B8%87%E7%BE%8E%E5%85%83%E7%9A%84%E8%B5%8E%E9%87%91%EF%BC%8C%E7%8E%B0%E5%9C%A8%E7%9E%84%E5%87%86-Linux-%E6%9C%8D%E5%8A%A1%E5%99%A8"><span class="toc-number">8.</span> <span class="toc-text">8 Akira 收取了 4200 万美元的赎金，现在瞄准 Linux 服务器</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://weekly.linuxcat.top/articles/2024-05/index.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://weekly.linuxcat.top/articles/2024-05/index.html&text=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://weekly.linuxcat.top/articles/2024-05/index.html&title=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://weekly.linuxcat.top/articles/2024-05/index.html&is_video=false&description=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复&body=Check out this article: https://weekly.linuxcat.top/articles/2024-05/index.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://weekly.linuxcat.top/articles/2024-05/index.html&title=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://weekly.linuxcat.top/articles/2024-05/index.html&title=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://weekly.linuxcat.top/articles/2024-05/index.html&title=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://weekly.linuxcat.top/articles/2024-05/index.html&title=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://weekly.linuxcat.top/articles/2024-05/index.html&name=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://weekly.linuxcat.top/articles/2024-05/index.html&t=Linuxcat周刊(第5期) 知名NAS系统暗藏后门,官方表示不予修复"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    mei
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li><!--
+     --><!--
+       --><li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="/assets/css/font-awesome.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdn.jsdmirror.com/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdn.jsdmirror.com/npm/clipboard@2.0.7/dist/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'ssdomei232/weekly';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-light';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

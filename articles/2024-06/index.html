@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="1 印度某银行的IT系统破旧不堪，以至于被禁止开设新账户。印度中央银行已禁止科塔克·马欣德拉银行（Kotak Mahindra Bank）通过其线上平台和应用程序为新客户开设账户或信用卡。科塔克·马欣德拉银行拥有超过4100万客户，管理资产超过5000亿美元。该行在其FY 22&#x2F;23年度报告中强调了年内对“强化安全措施”的重视。然而，印度储备银行对此并不满意。     消息来源: The">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名">
+<meta property="og:url" content="https://weekly.linuxcat.top/articles/2024-06/index.html">
+<meta property="og:site_name" content="Linuxcat周刊">
+<meta property="og:description" content="1 印度某银行的IT系统破旧不堪，以至于被禁止开设新账户。印度中央银行已禁止科塔克·马欣德拉银行（Kotak Mahindra Bank）通过其线上平台和应用程序为新客户开设账户或信用卡。科塔克·马欣德拉银行拥有超过4100万客户，管理资产超过5000亿美元。该行在其FY 22&#x2F;23年度报告中强调了年内对“强化安全措施”的重视。然而，印度储备银行对此并不满意。     消息来源: The">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-05-01T08:21:00.000Z">
+<meta property="article:modified_time" content="2024-07-04T09:08:21.131Z">
+<meta property="article:author" content="mei">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="Apple">
+<meta property="article:tag" content="OpenAI">
+<meta property="article:tag" content="IBM">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+        
+      
+    
+    <!-- title -->
+    <title>Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Linuxcat周刊" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li><!--
+     --><!--
+       --><li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/articles/2024-07/index.html"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/articles/2024-05/index.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://weekly.linuxcat.top/articles/2024-06/index.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://weekly.linuxcat.top/articles/2024-06/index.html&text=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://weekly.linuxcat.top/articles/2024-06/index.html&title=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://weekly.linuxcat.top/articles/2024-06/index.html&is_video=false&description=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名&body=Check out this article: https://weekly.linuxcat.top/articles/2024-06/index.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://weekly.linuxcat.top/articles/2024-06/index.html&title=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://weekly.linuxcat.top/articles/2024-06/index.html&title=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://weekly.linuxcat.top/articles/2024-06/index.html&title=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://weekly.linuxcat.top/articles/2024-06/index.html&title=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://weekly.linuxcat.top/articles/2024-06/index.html&name=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://weekly.linuxcat.top/articles/2024-06/index.html&t=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8D%B0%E5%BA%A6%E6%9F%90%E9%93%B6%E8%A1%8C%E7%9A%84IT%E7%B3%BB%E7%BB%9F%E7%A0%B4%E6%97%A7%E4%B8%8D%E5%A0%AA%EF%BC%8C%E4%BB%A5%E8%87%B3%E4%BA%8E%E8%A2%AB%E7%A6%81%E6%AD%A2%E5%BC%80%E8%AE%BE%E6%96%B0%E8%B4%A6%E6%88%B7%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">1 印度某银行的IT系统破旧不堪，以至于被禁止开设新账户。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-IBM-%E6%94%B6%E8%B4%AD-HashiCorp-%E4%BB%A5%E5%8A%A0%E5%BC%BA%E5%A4%9A%E4%BA%91-IT-%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E5%8A%9B"><span class="toc-number">2.</span> <span class="toc-text">2 IBM 收购 HashiCorp 以加强多云 IT 自动化实力</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%BE%8E%E5%9B%BD%E6%80%BB%E7%BB%9F%E6%8B%9C%E7%99%BB%E7%AD%BE%E7%BD%B2%E9%92%88%E5%AF%B9TikTok%E7%9A%84%E2%80%9C%E7%A6%81%E4%BB%A4%E2%80%9D%E6%B3%95%E6%A1%88%EF%BC%8C%E4%BD%BF%E4%B9%8B%E6%AD%A3%E5%BC%8F%E6%88%90%E4%B8%BA%E6%B3%95%E5%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">3 美国总统拜登签署针对TikTok的“禁令”法案，使之正式成为法律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%8B%B9%E6%9E%9C%E6%9C%80%E6%96%B0%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E9%A2%84%E7%A4%BA%E4%BA%86AI%E5%8F%AF%E8%83%BD%E5%A6%82%E4%BD%95%E5%BA%94%E7%94%A8%E4%BA%8EiPhone%E4%B9%8B%E4%B8%AD"><span class="toc-number">4.</span> <span class="toc-text">4 苹果最新的AI模型预示了AI可能如何应用于iPhone之中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-TensorFlow-AI-%E6%A8%A1%E5%9E%8B%E5%9B%A0-Keras-API-%E7%BC%BA%E9%99%B7%E9%9D%A2%E4%B8%B4%E9%A3%8E%E9%99%A9"><span class="toc-number">5.</span> <span class="toc-text">5 TensorFlow AI 模型因 Keras API 缺陷面临风险</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-73-%E7%9A%84%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E4%B8%93%E5%AE%B6%E5%BF%BD%E7%95%A5%E4%BA%86%E6%88%96%E6%9C%AA%E8%83%BD%E5%8F%8A%E6%97%B6%E5%93%8D%E5%BA%94%E5%85%B3%E9%94%AE%E8%AD%A6%E6%8A%A5"><span class="toc-number">6.</span> <span class="toc-text">6 73%的中小企业安全专家忽略了或未能及时响应关键警报</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E9%BB%91%E5%AE%A2%E5%88%A9%E7%94%A8%E4%B8%A4%E4%B8%AA%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2024-20353%E3%80%81CVE-2024-20359%EF%BC%89%E5%AF%B9Cisco-ASA%E8%AE%BE%E5%A4%87%E8%BF%9B%E8%A1%8C%E4%BA%86%E5%90%8E%E9%97%A8%E6%A4%8D%E5%85%A5"><span class="toc-number">7.</span> <span class="toc-text">7 黑客利用两个零日漏洞（CVE-2024-20353、CVE-2024-20359）对Cisco ASA设备进行了后门植入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%89%93%E7%88%86%E4%BA%91%E8%B4%A6%E5%8D%95%EF%BC%8C%E5%8F%AA%E9%9C%80%E8%A6%81S3%E6%A1%B6%E5%90%8D"><span class="toc-number">8.</span> <span class="toc-text">8 打爆云账单，只需要S3桶名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E7%A5%9E%E7%A7%98%E7%9A%84%E2%80%9Cgpt2-chatbot%E2%80%9D%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%A8%A1%E5%9E%8B%E7%AA%81%E7%84%B6%E5%87%BA%E7%8E%B0%EF%BC%8C%E4%BB%A4%E4%B8%93%E5%AE%B6%E6%84%9F%E5%88%B0%E5%9B%B0%E6%83%91%E3%80%82"><span class="toc-number">9.</span> <span class="toc-text">9 神秘的“gpt2-chatbot”人工智能模型突然出现，令专家感到困惑。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E8%8B%B9%E6%9E%9C%E2%80%9C%E6%9E%81%E5%BA%A6%E9%9A%90%E7%A7%81%E2%80%9D%E7%9A%84Safari%E5%9C%A8%E6%AC%A7%E6%B4%B2%E5%B9%B6%E9%9D%9E%E5%A6%82%E6%AD%A4%E9%9A%90%E7%A7%81"><span class="toc-number">10.</span> <span class="toc-text">10 苹果“极度隐私”的Safari在欧洲并非如此隐私</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%9F%83%E9%9A%86%C2%B7%E9%A9%AC%E6%96%AF%E5%85%8B%E6%9C%80%E6%96%B0%E7%9A%84%E6%83%B3%E6%B3%95%E6%98%AF%E5%B0%86%E7%89%B9%E6%96%AF%E6%8B%89%E6%B1%BD%E8%BD%A6%E5%8F%98%E6%88%90%E8%BD%AE%E4%B8%8A%E7%9A%84AWS%E3%80%82"><span class="toc-number">11.</span> <span class="toc-text">11 埃隆·马斯克最新的想法是将特斯拉汽车变成轮上的AWS。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E6%95%B0%E7%99%BE%E4%B8%87%E4%B8%AA-Docker-%E5%AD%98%E5%82%A8%E5%BA%93%E5%9C%A8%E6%8E%A8%E9%80%81%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6%E5%92%8C%E9%92%93%E9%B1%BC%E7%BD%91%E7%AB%99"><span class="toc-number">12.</span> <span class="toc-text">12 数百万个 Docker 存储库在推送恶意软件和钓鱼网站</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">mei</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-05-01T08:21:00.000Z" class="dt-published" itemprop="datePublished">2024-05-01</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">Linuxcat周刊</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/AI/" rel="tag">AI</a>, <a class="p-category" href="/tags/Apple/" rel="tag">Apple</a>, <a class="p-category" href="/tags/IBM/" rel="tag">IBM</a>, <a class="p-category" href="/tags/OpenAI/" rel="tag">OpenAI</a>, <a class="p-category" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="1-印度某银行的IT系统破旧不堪，以至于被禁止开设新账户。"><a href="#1-印度某银行的IT系统破旧不堪，以至于被禁止开设新账户。" class="headerlink" title="1 印度某银行的IT系统破旧不堪，以至于被禁止开设新账户。"></a>1 印度某银行的IT系统破旧不堪，以至于被禁止开设新账户。</h2><p>印度中央银行已禁止科塔克·马欣德拉银行（Kotak Mahindra Bank）通过其线上平台和应用程序为新客户开设账户或信用卡。<br>科塔克·马欣德拉银行拥有超过4100万客户，管理资产超过5000亿美元。该行在其FY 22&#x2F;23年度报告中强调了年内对“强化安全措施”的重视。然而，印度储备银行对此并不满意。   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theregister.com/2024/04/25/rbi_india_kotak_mahindra_bank/">The Register</a></p>
+</blockquote>
+<h2 id="2-IBM-收购-HashiCorp-以加强多云-IT-自动化实力"><a href="#2-IBM-收购-HashiCorp-以加强多云-IT-自动化实力" class="headerlink" title="2 IBM 收购 HashiCorp 以加强多云 IT 自动化实力"></a>2 IBM 收购 HashiCorp 以加强多云 IT 自动化实力</h2><p>IBM于4月24日宣布，将以64亿美元现金收购IT基础设施提供商HashiCorp<br>IBM在新闻稿中表示，HashiCorp的基础设施与安全生命周期管理软件将补充IBM在混合云和人工智能方面的服务。收购完成后，HashiCorp将继续作为IBM内部的一个独立部门运作。<br>如同2018年IBM收购Red Hat一样，此次收购将进一步巩固IBM在云原生计算领域的地位。许多云原生部署已经使用了HashiCorp的Terraform多云基础设施配置工具。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://thenewstack.io/ibm-purchases-hashicorp-for-multicloud-it-automation/">thenewstack</a></p>
+</blockquote>
+<h2 id="3-美国总统拜登签署针对TikTok的“禁令”法案，使之正式成为法律"><a href="#3-美国总统拜登签署针对TikTok的“禁令”法案，使之正式成为法律" class="headerlink" title="3 美国总统拜登签署针对TikTok的“禁令”法案，使之正式成为法律"></a>3 美国总统拜登签署针对TikTok的“禁令”法案，使之正式成为法律</h2><p>美国总统乔·拜登签署了一项包含法案的对外援助方案，该法案规定，如果中国母公司字节跳动在未来一年内未能剥离TikTok，将禁止该短视频应用。<br>如今，这项“剥离或禁用”法案已成为法律，标志着字节跳动需开始着手进行相关操作的计时开始。该公司最初有九个月的时间来达成交易，但如果总统认为取得进展，可再延长三个月。   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theverge.com/2024/4/24/24139036/biden-signs-tiktok-ban-bill-divest-foreign-aid-package">The Verge</a></p>
+</blockquote>
+<blockquote>
+<p>评价: 虽然我很讨厌抖音,但是让它恶心外国人还是很好的</p>
+</blockquote>
+<h2 id="4-苹果最新的AI模型预示了AI可能如何应用于iPhone之中"><a href="#4-苹果最新的AI模型预示了AI可能如何应用于iPhone之中" class="headerlink" title="4 苹果最新的AI模型预示了AI可能如何应用于iPhone之中"></a>4 苹果最新的AI模型预示了AI可能如何应用于iPhone之中</h2><p>苹果对于其在生成式AI领域的计划一直保持低调，但随着今天发布的新AI模型，公司显然在短期内致力于让AI在苹果设备上本地运行。<br>周三，来自苹果的研究人员在Hugging Face模型库发布了OpenELM系列，共包含四个非常小巧的语言模型。苹果在其Hugging Face模型页面表示，OpenELM（全称为“开源高效语言模型”）在电子邮件撰写等文本相关任务上表现出极高效率。这些模型均为开源，可供开发者直接使用。<br>它共有四种尺寸：2.7亿参数；4.5亿参数；11亿参数；以及30亿参数。   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theverge.com/2024/4/24/24139266/apple-ai-model-openelm-iphone-laptops-strategy">The Verge</a></p>
+</blockquote>
+<h2 id="5-TensorFlow-AI-模型因-Keras-API-缺陷面临风险"><a href="#5-TensorFlow-AI-模型因-Keras-API-缺陷面临风险" class="headerlink" title="5 TensorFlow AI 模型因 Keras API 缺陷面临风险"></a>5 TensorFlow AI 模型因 Keras API 缺陷面临风险</h2><p>由于Keras API中存在的一个漏洞，可能导致潜在不安全代码执行，使得基于TensorFlow的AI模型面临供应链攻击的风险。<br>Keras是一种神经网络API，用Python编写，为深度学习软件库（如TensorFlow和Theano）提供高级接口。<br>被追踪为CVE-2024-3660的漏洞影响Keras 2.13版本之前的所有版本，该漏洞于上周二由CERT协调中心披露。该漏洞存在于Lambda Layers处理机制中，Lambda Layers是一种AI“构建块”，允许开发人员将任意Python代码作为匿名lambda函数添加到模型中。   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.scmagazine.com/news/tensorflow-ai-models-at-risk-due-to-keras-api-flaw">SC杂志</a></p>
+</blockquote>
+<h2 id="6-73-的中小企业安全专家忽略了或未能及时响应关键警报"><a href="#6-73-的中小企业安全专家忽略了或未能及时响应关键警报" class="headerlink" title="6 73%的中小企业安全专家忽略了或未能及时响应关键警报"></a>6 73%的中小企业安全专家忽略了或未能及时响应关键警报</h2><p>根据Coro公司的调查，由于需要管理安全堆栈中多种工具的复杂性和要求过高，使得中小企业（SMEs）的IT人员不堪重负，导致他们无法及时发现并应对严重级别的安全事件，从而削弱了企业的安全态势。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.helpnetsecurity.com/2024/04/25/73-of-sme-security-pros-missed-or-ignored-critical-alerts/">helpnetsecurity</a></p>
+</blockquote>
+<h2 id="7-黑客利用两个零日漏洞（CVE-2024-20353、CVE-2024-20359）对Cisco-ASA设备进行了后门植入"><a href="#7-黑客利用两个零日漏洞（CVE-2024-20353、CVE-2024-20359）对Cisco-ASA设备进行了后门植入" class="headerlink" title="7 黑客利用两个零日漏洞（CVE-2024-20353、CVE-2024-20359）对Cisco ASA设备进行了后门植入"></a>7 黑客利用两个零日漏洞（CVE-2024-20353、CVE-2024-20359）对Cisco ASA设备进行了后门植入</h2><p>一个国家资助的威胁行为者已经成功地入侵了全球政府网络中使用的思科自适应安全设备（ASA），并利用两个零日漏洞（CVE-2024-20353，CVE-2024-20359）在这些设备上安装了后门。这一情况由思科Talos研究团队于周三分享。<br>首个由思科客户确认的活动发生在2024年1月初，但实际攻击始于2023年11月。“此外，我们发现了证据表明这种能力早在2023年7月就开始被测试和开发。”研究人员补充道。   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.helpnetsecurity.com/2024/04/24/cve-2024-20353-cve-2024-20359/">helpnetsecurity</a></p>
+</blockquote>
+<h2 id="8-打爆云账单，只需要S3桶名"><a href="#8-打爆云账单，只需要S3桶名" class="headerlink" title="8 打爆云账单，只需要S3桶名"></a>8 打爆云账单，只需要S3桶名</h2><p>如果您正在使用亚马逊网络服务，并且您的S3存储桶可以从公开网络访问，那么最好不要选择一个通用的名称作为空间名。避免使用“example”，跳过“change_me”，甚至不要选择“foo”或“bar”。有人也许会有与您相同的“稍后更改此名称”的想法，但这可能会让您损失一台MacBook的金额。<br>问问Maciej Pocwierz吧，他恰好选择了一个S3名称，而“其中一个流行的开源工具”使用了该名称作为其默认备份配置。在为客户项目设置存储桶后，他查看了自己的账单页面，发现在一天之内有近1亿次未经授权的尝试在他的存储桶上创建新文件（PUT请求）。账单超过了1300美元且还在不断增加。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://arstechnica.com/information-technology/2024/04/aws-s3-storage-bucket-with-unlucky-name-nearly-cost-developer-1300/">arstechnica</a></p>
+</blockquote>
+<h2 id="9-神秘的“gpt2-chatbot”人工智能模型突然出现，令专家感到困惑。"><a href="#9-神秘的“gpt2-chatbot”人工智能模型突然出现，令专家感到困惑。" class="headerlink" title="9 神秘的“gpt2-chatbot”人工智能模型突然出现，令专家感到困惑。"></a>9 神秘的“gpt2-chatbot”人工智能模型突然出现，令专家感到困惑。</h2><p>近日，社交媒体开始传播一个名为“gpt2-chatbot”的新神秘聊天机器人出现在LMSYS聊天机器人竞技场上的消息。一些人推测这可能是OpenAI即将推出的GPT-4.5或GPT-5大型语言模型（LLM）的秘密测试版本。付费版本的ChatGPT目前由GPT-4 Turbo提供支持。   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://arstechnica.com/information-technology/2024/04/rumors-swirl-about-mystery-gpt2-chatbot-that-some-think-is-gpt-5-in-disguise/">arstechnica.com</a></p>
+</blockquote>
+<h2 id="10-苹果“极度隐私”的Safari在欧洲并非如此隐私"><a href="#10-苹果“极度隐私”的Safari在欧洲并非如此隐私" class="headerlink" title="10 苹果“极度隐私”的Safari在欧洲并非如此隐私"></a>10 苹果“极度隐私”的Safari在欧洲并非如此隐私</h2><p>苹果对欧洲反垄断规定的勉强接受，允许iPhone上的第三方应用商店，却让Safari浏览器的用户面临潜在的网络活动追踪风险。<br>开发者Talal Haj Bakry和Tommy Mysk调查了苹果在iOS上通过Safari实现第三方软件市场安装过程的方式，并得出了这样的结论：苹果的方法特别粗糙。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theregister.com/2024/04/30/apple_safari_europe_tracking/">The Register</a></p>
+</blockquote>
+<h2 id="11-埃隆·马斯克最新的想法是将特斯拉汽车变成轮上的AWS。"><a href="#11-埃隆·马斯克最新的想法是将特斯拉汽车变成轮上的AWS。" class="headerlink" title="11 埃隆·马斯克最新的想法是将特斯拉汽车变成轮上的AWS。"></a>11 埃隆·马斯克最新的想法是将特斯拉汽车变成轮上的AWS。</h2><p>特斯拉这家电动汽车制造商正在考虑一个极具盈利性的点子——利用其车辆中的所有计算能力来处理工作负载以赚取现金，就像是一种轮上的AWS。<br>由埃隆·马斯克领导的这家公司在其最近的日历第一季度财报电话会议上表示，他们注意到其车辆有相当一部分时间只是闲置不动。许多车辆都装备了相当数量的处理能力，那么为什么不让它们做些有用的事情，也为公司赚些钱呢？</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theregister.com/2024/04/30/tesla_ai_workloads/">The Register</a></p>
+</blockquote>
+<h2 id="12-数百万个-Docker-存储库在推送恶意软件和钓鱼网站"><a href="#12-数百万个-Docker-存储库在推送恶意软件和钓鱼网站" class="headerlink" title="12 数百万个 Docker 存储库在推送恶意软件和钓鱼网站"></a>12 数百万个 Docker 存储库在推送恶意软件和钓鱼网站</h2><p>自2021年初以来，已发现三次大规模活动针对 Docker Hub 用户，植入了数百万个存储库，推送了恶意软件和钓鱼网站。<br>据JFrog安全研究人员发现，Docker Hub托管的1500万个存储库中约有20%含有恶意内容，从垃圾邮件到危险的恶意软件和钓鱼网站不等。<br>研究人员发现了近460万个不包含 Docker 镜像的存储库，这些镜像无法在 Kubernetes 集群或 Docker 引擎上运行，并且将约281万个存储库与三个大规模的恶意活动联系起来。 </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.bleepingcomputer.com/news/security/millions-of-docker-repos-found-pushing-malware-phishing-sites/">bleepingcomputer</a></p>
+</blockquote>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li>
+        
+          <li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E5%8D%B0%E5%BA%A6%E6%9F%90%E9%93%B6%E8%A1%8C%E7%9A%84IT%E7%B3%BB%E7%BB%9F%E7%A0%B4%E6%97%A7%E4%B8%8D%E5%A0%AA%EF%BC%8C%E4%BB%A5%E8%87%B3%E4%BA%8E%E8%A2%AB%E7%A6%81%E6%AD%A2%E5%BC%80%E8%AE%BE%E6%96%B0%E8%B4%A6%E6%88%B7%E3%80%82"><span class="toc-number">1.</span> <span class="toc-text">1 印度某银行的IT系统破旧不堪，以至于被禁止开设新账户。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-IBM-%E6%94%B6%E8%B4%AD-HashiCorp-%E4%BB%A5%E5%8A%A0%E5%BC%BA%E5%A4%9A%E4%BA%91-IT-%E8%87%AA%E5%8A%A8%E5%8C%96%E5%AE%9E%E5%8A%9B"><span class="toc-number">2.</span> <span class="toc-text">2 IBM 收购 HashiCorp 以加强多云 IT 自动化实力</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E7%BE%8E%E5%9B%BD%E6%80%BB%E7%BB%9F%E6%8B%9C%E7%99%BB%E7%AD%BE%E7%BD%B2%E9%92%88%E5%AF%B9TikTok%E7%9A%84%E2%80%9C%E7%A6%81%E4%BB%A4%E2%80%9D%E6%B3%95%E6%A1%88%EF%BC%8C%E4%BD%BF%E4%B9%8B%E6%AD%A3%E5%BC%8F%E6%88%90%E4%B8%BA%E6%B3%95%E5%BE%8B"><span class="toc-number">3.</span> <span class="toc-text">3 美国总统拜登签署针对TikTok的“禁令”法案，使之正式成为法律</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E8%8B%B9%E6%9E%9C%E6%9C%80%E6%96%B0%E7%9A%84AI%E6%A8%A1%E5%9E%8B%E9%A2%84%E7%A4%BA%E4%BA%86AI%E5%8F%AF%E8%83%BD%E5%A6%82%E4%BD%95%E5%BA%94%E7%94%A8%E4%BA%8EiPhone%E4%B9%8B%E4%B8%AD"><span class="toc-number">4.</span> <span class="toc-text">4 苹果最新的AI模型预示了AI可能如何应用于iPhone之中</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-TensorFlow-AI-%E6%A8%A1%E5%9E%8B%E5%9B%A0-Keras-API-%E7%BC%BA%E9%99%B7%E9%9D%A2%E4%B8%B4%E9%A3%8E%E9%99%A9"><span class="toc-number">5.</span> <span class="toc-text">5 TensorFlow AI 模型因 Keras API 缺陷面临风险</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-73-%E7%9A%84%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A%E5%AE%89%E5%85%A8%E4%B8%93%E5%AE%B6%E5%BF%BD%E7%95%A5%E4%BA%86%E6%88%96%E6%9C%AA%E8%83%BD%E5%8F%8A%E6%97%B6%E5%93%8D%E5%BA%94%E5%85%B3%E9%94%AE%E8%AD%A6%E6%8A%A5"><span class="toc-number">6.</span> <span class="toc-text">6 73%的中小企业安全专家忽略了或未能及时响应关键警报</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E9%BB%91%E5%AE%A2%E5%88%A9%E7%94%A8%E4%B8%A4%E4%B8%AA%E9%9B%B6%E6%97%A5%E6%BC%8F%E6%B4%9E%EF%BC%88CVE-2024-20353%E3%80%81CVE-2024-20359%EF%BC%89%E5%AF%B9Cisco-ASA%E8%AE%BE%E5%A4%87%E8%BF%9B%E8%A1%8C%E4%BA%86%E5%90%8E%E9%97%A8%E6%A4%8D%E5%85%A5"><span class="toc-number">7.</span> <span class="toc-text">7 黑客利用两个零日漏洞（CVE-2024-20353、CVE-2024-20359）对Cisco ASA设备进行了后门植入</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E6%89%93%E7%88%86%E4%BA%91%E8%B4%A6%E5%8D%95%EF%BC%8C%E5%8F%AA%E9%9C%80%E8%A6%81S3%E6%A1%B6%E5%90%8D"><span class="toc-number">8.</span> <span class="toc-text">8 打爆云账单，只需要S3桶名</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E7%A5%9E%E7%A7%98%E7%9A%84%E2%80%9Cgpt2-chatbot%E2%80%9D%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%A8%A1%E5%9E%8B%E7%AA%81%E7%84%B6%E5%87%BA%E7%8E%B0%EF%BC%8C%E4%BB%A4%E4%B8%93%E5%AE%B6%E6%84%9F%E5%88%B0%E5%9B%B0%E6%83%91%E3%80%82"><span class="toc-number">9.</span> <span class="toc-text">9 神秘的“gpt2-chatbot”人工智能模型突然出现，令专家感到困惑。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E8%8B%B9%E6%9E%9C%E2%80%9C%E6%9E%81%E5%BA%A6%E9%9A%90%E7%A7%81%E2%80%9D%E7%9A%84Safari%E5%9C%A8%E6%AC%A7%E6%B4%B2%E5%B9%B6%E9%9D%9E%E5%A6%82%E6%AD%A4%E9%9A%90%E7%A7%81"><span class="toc-number">10.</span> <span class="toc-text">10 苹果“极度隐私”的Safari在欧洲并非如此隐私</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E5%9F%83%E9%9A%86%C2%B7%E9%A9%AC%E6%96%AF%E5%85%8B%E6%9C%80%E6%96%B0%E7%9A%84%E6%83%B3%E6%B3%95%E6%98%AF%E5%B0%86%E7%89%B9%E6%96%AF%E6%8B%89%E6%B1%BD%E8%BD%A6%E5%8F%98%E6%88%90%E8%BD%AE%E4%B8%8A%E7%9A%84AWS%E3%80%82"><span class="toc-number">11.</span> <span class="toc-text">11 埃隆·马斯克最新的想法是将特斯拉汽车变成轮上的AWS。</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E6%95%B0%E7%99%BE%E4%B8%87%E4%B8%AA-Docker-%E5%AD%98%E5%82%A8%E5%BA%93%E5%9C%A8%E6%8E%A8%E9%80%81%E6%81%B6%E6%84%8F%E8%BD%AF%E4%BB%B6%E5%92%8C%E9%92%93%E9%B1%BC%E7%BD%91%E7%AB%99"><span class="toc-number">12.</span> <span class="toc-text">12 数百万个 Docker 存储库在推送恶意软件和钓鱼网站</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://weekly.linuxcat.top/articles/2024-06/index.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://weekly.linuxcat.top/articles/2024-06/index.html&text=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://weekly.linuxcat.top/articles/2024-06/index.html&title=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://weekly.linuxcat.top/articles/2024-06/index.html&is_video=false&description=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名&body=Check out this article: https://weekly.linuxcat.top/articles/2024-06/index.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://weekly.linuxcat.top/articles/2024-06/index.html&title=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://weekly.linuxcat.top/articles/2024-06/index.html&title=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://weekly.linuxcat.top/articles/2024-06/index.html&title=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://weekly.linuxcat.top/articles/2024-06/index.html&title=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://weekly.linuxcat.top/articles/2024-06/index.html&name=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://weekly.linuxcat.top/articles/2024-06/index.html&t=Linuxcat周刊(第6期) 打爆云账单，只需要S3桶名"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    mei
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li><!--
+     --><!--
+       --><li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="/assets/css/font-awesome.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdn.jsdmirror.com/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdn.jsdmirror.com/npm/clipboard@2.0.7/dist/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'ssdomei232/weekly';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-light';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

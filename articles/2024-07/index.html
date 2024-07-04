@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="大事概览1 jsDelivr遇到证书问题北京时间2024年05-月02日早上七八点左右,cdn.jsDelivr.net遇到了证书问题并持续数个小时未恢复,此次问题造成了大量网站无法正常加载 2 这周一是陈皓去世一周年2023年5月13日，陈皓心梗逝世，享年47岁。我写了一篇文章来纪念他(不过截至本次周刊发布,都还没有写完) : 做环保的程序员,从不用抖音开始 3 宿迁蒲公英机房联通方向失联106">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linuxcat周刊(第7期) 美西两个月后只能绕路而行">
+<meta property="og:url" content="https://weekly.linuxcat.top/articles/2024-07/index.html">
+<meta property="og:site_name" content="Linuxcat周刊">
+<meta property="og:description" content="大事概览1 jsDelivr遇到证书问题北京时间2024年05-月02日早上七八点左右,cdn.jsDelivr.net遇到了证书问题并持续数个小时未恢复,此次问题造成了大量网站无法正常加载 2 这周一是陈皓去世一周年2023年5月13日，陈皓心梗逝世，享年47岁。我写了一篇文章来纪念他(不过截至本次周刊发布,都还没有写完) : 做环保的程序员,从不用抖音开始 3 宿迁蒲公英机房联通方向失联106">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weekly.linuxcat.top/docs/assets/2024/07/AD01221B1B2E935414B0725865BB3C9A.jpg">
+<meta property="article:published_time" content="2024-05-19T10:13:00.000Z">
+<meta property="article:modified_time" content="2024-07-04T09:08:28.767Z">
+<meta property="article:author" content="mei">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="OpenAI">
+<meta property="article:tag" content="通讯">
+<meta property="article:tag" content="jsDelivr">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weekly.linuxcat.top/docs/assets/2024/07/AD01221B1B2E935414B0725865BB3C9A.jpg">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+        
+      
+    
+    <!-- title -->
+    <title>Linuxcat周刊(第7期) 美西两个月后只能绕路而行</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Linuxcat周刊" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li><!--
+     --><!--
+       --><li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/articles/2024-08/index.html"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/articles/2024-06/index.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://weekly.linuxcat.top/articles/2024-07/index.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://weekly.linuxcat.top/articles/2024-07/index.html&text=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://weekly.linuxcat.top/articles/2024-07/index.html&title=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://weekly.linuxcat.top/articles/2024-07/index.html&is_video=false&description=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linuxcat周刊(第7期) 美西两个月后只能绕路而行&body=Check out this article: https://weekly.linuxcat.top/articles/2024-07/index.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://weekly.linuxcat.top/articles/2024-07/index.html&title=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://weekly.linuxcat.top/articles/2024-07/index.html&title=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://weekly.linuxcat.top/articles/2024-07/index.html&title=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://weekly.linuxcat.top/articles/2024-07/index.html&title=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://weekly.linuxcat.top/articles/2024-07/index.html&name=Linuxcat周刊(第7期) 美西两个月后只能绕路而行&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://weekly.linuxcat.top/articles/2024-07/index.html&t=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E4%BA%8B%E6%A6%82%E8%A7%88"><span class="toc-number">1.</span> <span class="toc-text">大事概览</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-jsDelivr%E9%81%87%E5%88%B0%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">1 jsDelivr遇到证书问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BF%99%E5%91%A8%E4%B8%80%E6%98%AF%E9%99%88%E7%9A%93%E5%8E%BB%E4%B8%96%E4%B8%80%E5%91%A8%E5%B9%B4"><span class="toc-number">1.2.</span> <span class="toc-text">2 这周一是陈皓去世一周年</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%BF%E8%BF%81%E8%92%B2%E5%85%AC%E8%8B%B1%E6%9C%BA%E6%88%BF%E8%81%94%E9%80%9A%E6%96%B9%E5%90%91%E5%A4%B1%E8%81%94106%E5%88%86%E9%92%9F"><span class="toc-number">1.3.</span> <span class="toc-text">3 宿迁蒲公英机房联通方向失联106分钟</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%90%E5%AD%90"><span class="toc-number">2.</span> <span class="toc-text">乐子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BE%8E%E8%A5%BF%E4%B8%A4%E4%B8%AA%E6%9C%88%E5%90%8E%E5%8F%AA%E8%83%BD%E7%BB%95%E8%B7%AF%E8%80%8C%E8%A1%8C"><span class="toc-number">2.1.</span> <span class="toc-text">1 美西两个月后只能绕路而行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-TikTok-%E5%B0%86%E5%88%A0%E9%99%A4%E6%9C%AA%E7%BB%8F%E6%8E%88%E6%9D%83%E7%9A%84-AI-%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86%E9%9F%B3%E4%B9%90"><span class="toc-number">2.2.</span> <span class="toc-text">2 TikTok 将删除未经授权的 AI 语音克隆音乐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%A8%E7%90%83%E6%9C%80%E5%A4%A7%E2%80%9D%E9%A3%8E%E6%8E%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E2%80%9D%E8%90%BD%E5%85%A5%E7%BD%91%E7%BB%9C%E7%8A%AF%E7%BD%AA%E5%88%86%E5%AD%90%E6%89%8B%E4%B8%AD"><span class="toc-number">2.3.</span> <span class="toc-text">3 全球最大”风控数据库”落入网络犯罪分子手中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%B8%AD%E5%9B%BD%E7%94%B5%E4%BF%A1%E5%8F%96%E5%BE%97PCDN%E8%BF%9D%E8%A7%84%E4%B8%9A%E5%8A%A1%E6%A3%80%E6%B5%8B%E4%B8%93%E5%88%A9%EF%BC%8C%E6%8F%90%E9%AB%98%E6%A3%80%E6%B5%8B%E7%9A%84%E5%87%86%E7%A1%AE%E7%8E%87"><span class="toc-number">2.4.</span> <span class="toc-text">4 中国电信取得PCDN违规业务检测专利，提高检测的准确率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-OpenAI%E5%9D%9A%E7%A7%B0%E5%91%A8%E4%B8%80%E4%B8%8D%E4%BC%9A%E6%8E%A8%E5%87%BA%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%88%96GPT-5"><span class="toc-number">2.5.</span> <span class="toc-text">5 OpenAI坚称周一不会推出搜索引擎或GPT-5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Verizon-AT-T%E5%92%8CT-Mobile%E7%9A%84%E2%80%9C%E6%97%A0%E9%99%90%E2%80%9D%E5%A5%97%E9%A4%90%E5%88%9A%E6%94%B6%E5%88%B0%E4%BA%861000%E4%B8%87%E7%BE%8E%E5%85%83%E7%9A%84%E7%BD%9A%E6%AC%BE%E8%AD%A6%E5%91%8A"><span class="toc-number">2.6.</span> <span class="toc-text">6 Verizon, AT&amp;T和T-Mobile的“无限”套餐刚收到了1000万美元的罚款警告</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-OpenAI-%E9%92%88%E5%AF%B9%E4%BD%BF%E7%94%A8-ChatGPT-%E5%BE%BD%E6%A0%87%E5%90%91-subreddit-r-chatGPT-%E6%8F%90%E5%87%BA%E7%89%88%E6%9D%83%E4%BE%B5%E6%9D%83%E5%A3%B0%E6%98%8E%E2%80%94%E2%80%94r-chatGPT-%E4%BD%BF%E7%94%A8%E4%BA%86%E5%AE%98%E6%96%B9-ChatGPT-%E5%BE%BD%E6%A0%87"><span class="toc-number">2.7.</span> <span class="toc-text">7 OpenAI 针对使用 ChatGPT 徽标向 subreddit r&#x2F;chatGPT 提出版权侵权声明——r&#x2F;chatGPT 使用了官方 ChatGPT 徽标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E2%80%9CTunnelVision%E2%80%9D-DHCP%E6%BC%8F%E6%B4%9E%E4%BD%BF%E6%94%BB%E5%87%BB%E8%80%85%E8%83%BD%E7%BB%95%E8%BF%87VPN%EF%BC%8C%E9%87%8D%E5%AE%9A%E5%90%91%E6%B5%81%E9%87%8F"><span class="toc-number">2.8.</span> <span class="toc-text">8 “TunnelVision” DHCP漏洞使攻击者能绕过VPN，重定向流量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E6%97%A5%E6%9C%AC%E6%B3%95%E9%99%A2%E8%A3%81%E5%AE%9AAI%E5%8F%91%E6%98%8E%E7%9A%84%E8%A3%85%E7%BD%AE%E4%B8%8D%E4%BA%88%E6%8E%88%E6%9D%83%E4%B8%93%E5%88%A9"><span class="toc-number">2.9.</span> <span class="toc-text">9 日本法院裁定AI发明的装置不予授权专利</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-OpenAI%E5%8F%91%E5%B8%83GPT-4o"><span class="toc-number">2.10.</span> <span class="toc-text">10 OpenAI发布GPT-4o</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="toc-number">3.</span> <span class="toc-text">推荐阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3%E7%9A%84-Android-%E8%8B%B1%E6%96%87"><span class="toc-number">3.1.</span> <span class="toc-text">人工智能时代的 Android(英文)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%91%E6%97%B6%E4%BB%A3%E4%B8%8B%E4%BF%9D%E6%8A%A4%E2%80%98%E7%A2%8E%E7%89%87%E5%8C%96%E2%80%99%E7%9A%84%E8%BA%AB%E4%BB%BD%E4%BF%A1%E6%81%AF-%E8%8B%B1%E6%96%87"><span class="toc-number">3.2.</span> <span class="toc-text">云时代下保护‘碎片化’的身份信息(英文)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%92%8C%E9%A9%B1%E5%8A%A8%E5%99%A8%E4%B8%8A%E7%9A%84%E2%80%9C%E5%AF%86%E7%A0%81%E4%BF%9D%E6%8A%A4%E2%80%9D%E5%AE%89%E5%85%A8%E6%80%A7%E5%A6%82%E4%BD%95%EF%BC%9F"><span class="toc-number">3.3.</span> <span class="toc-text">文件和驱动器上的“密码保护”安全性如何？</span></a></li></ol></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Linuxcat周刊(第7期) 美西两个月后只能绕路而行
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">mei</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-05-19T10:13:00.000Z" class="dt-published" itemprop="datePublished">2024-05-19</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">Linuxcat周刊</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/AI/" rel="tag">AI</a>, <a class="p-category" href="/tags/OpenAI/" rel="tag">OpenAI</a>, <a class="p-category" href="/tags/jsDelivr/" rel="tag">jsDelivr</a>, <a class="p-category" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a>, <a class="p-category" href="/tags/%E9%80%9A%E8%AE%AF/" rel="tag">通讯</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="大事概览"><a href="#大事概览" class="headerlink" title="大事概览"></a>大事概览</h2><h3 id="1-jsDelivr遇到证书问题"><a href="#1-jsDelivr遇到证书问题" class="headerlink" title="1 jsDelivr遇到证书问题"></a>1 jsDelivr遇到证书问题</h3><p>北京时间2024年05-月02日早上七八点左右,cdn.jsDelivr.net遇到了证书问题并持续数个小时未恢复,此次问题造成了大量网站无法正常加载</p>
+<h3 id="2-这周一是陈皓去世一周年"><a href="#2-这周一是陈皓去世一周年" class="headerlink" title="2 这周一是陈皓去世一周年"></a>2 这周一是陈皓去世一周年</h3><p>2023年5月13日，陈皓心梗逝世，享年47岁。<br>我写了一篇文章来纪念他(不过截至本次周刊发布,都还没有写完) : <a target="_blank" rel="noopener" href="https://ssdomei232.github.io/articles/anti-douyin/">做环保的程序员,从不用抖音开始</a></p>
+<h3 id="3-宿迁蒲公英机房联通方向失联106分钟"><a href="#3-宿迁蒲公英机房联通方向失联106分钟" class="headerlink" title="3 宿迁蒲公英机房联通方向失联106分钟"></a>3 宿迁蒲公英机房联通方向失联106分钟</h3><p>北京时间2024年5月13日下午1:13,蒲公英IDC机房联通方向失联,BGP线路及联通单线均受到影响,无法联通,于下午2:59左右恢复,此次故障持续106分钟,其它机房(京东云)未见此问题<br><img src="/docs/assets/2024/07/AD01221B1B2E935414B0725865BB3C9A.jpg" alt="宿迁蒲公英机房联通方向失联106分钟" title="宿迁蒲公英机房联通方向失联106分钟"></p>
+<h2 id="乐子"><a href="#乐子" class="headerlink" title="乐子"></a>乐子</h2><h3 id="1-美西两个月后只能绕路而行"><a href="#1-美西两个月后只能绕路而行" class="headerlink" title="1 美西两个月后只能绕路而行"></a>1 美西两个月后只能绕路而行</h3><p>美国联邦通信委员会（FCC）25日表示，已要求中国电信、中国联通和中国移动的美国子公司停止在美国境内的固定或移动宽带互联网业务。美国联邦通信委员会表示，它要求中国运营商在周四批准的网络中立令生效之日起60天内停止提供服务。该命令还适用于中资电信企业太平洋网络有限公司及其全资子公司 ComNet。<br>美国联邦通信委员会提到，中国可访问通常位于数据中心内的接入点 (POP) 存在国家安全方面的担忧。FCC 专员斯塔克斯表示：“他们正在与其他网络互连，并可以访问重要的接入点和数据中心”，并敦促“仔细研究敌对提供商对我们的数据和数据中心构成的威胁”。这是华盛顿限制中国电信运营商的最新行动，包括限制处理互联网流量的海底光缆。（路透社）<br>今天(25日)，FCC 以 3 比 2 投票决定恢复美国的网络中立规则，扩大了政府对 ISP 的监管权力。此次限制应该更多的是禁止中国的电信运营商在美国从事宽带接入业务以执行此前禁止这些公司提供电信服务的命令，多家IDC曾否认会影响CN2线路。目前没有明确信息可以判断是否会对CN2GIA、CMI等优化线路造成影响。电信企业也可能采取变通的做法。    </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.nodeseek.com/post-99949-1">nodeseek</a></p>
+</blockquote>
+<h3 id="2-TikTok-将删除未经授权的-AI-语音克隆音乐"><a href="#2-TikTok-将删除未经授权的-AI-语音克隆音乐" class="headerlink" title="2 TikTok 将删除未经授权的 AI 语音克隆音乐"></a>2 TikTok 将删除未经授权的 AI 语音克隆音乐</h3><p>TikTok 与环球音乐集团 (UMG) 达成的新协议包含一项关键条款：该短视频应用同意删除人工智能创作的未经授权的音乐。字节跳动有限公司旗下的应用与全球最大的唱片公司达成的协议，终于结束了长达数月的关于报酬以及该平台上人工智能生成音乐的激增的争执。两家公司周四在一份声明中表示，TikTok 将开发“改善艺术家和词曲作者归属的工具”，以解决音乐行业在面临人工智能生成的材料在网上迅速传播时面临的一个关键症结。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.bloomberg.com/news/articles/2024-05-02/unauthorized-ai-voice-clones-of-taylor-swift-face-removal-from-tiktok">彭博社</a></p>
+</blockquote>
+<h3 id="3-全球最大”风控数据库”落入网络犯罪分子手中"><a href="#3-全球最大”风控数据库”落入网络犯罪分子手中" class="headerlink" title="3 全球最大”风控数据库”落入网络犯罪分子手中"></a>3 全球最大”风控数据库”落入网络犯罪分子手中</h3><p>近日，一个被全球主流银行和超过300个政府情报机构使用的“风控数据库”（又称恐怖分子数据库）发生数据泄露，530万条高风险个人信息落入犯罪分子手中并在网上泄露<br>泄露的数据库名为World-Check，汇总了数以百万的非法分子（高风险人物）和实体信息，例如恐怖分子、洗钱者、不端政客等，供企业验证用户可信度（KYC），尤其是银行等金融机构用来验证其客户的身份，确定潜在客户是否可能与洗钱等金融犯罪有关，或是否受到政府制裁。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.51cto.com/article/786750.html">51CTO</a></p>
+</blockquote>
+<h3 id="4-中国电信取得PCDN违规业务检测专利，提高检测的准确率"><a href="#4-中国电信取得PCDN违规业务检测专利，提高检测的准确率" class="headerlink" title="4 中国电信取得PCDN违规业务检测专利，提高检测的准确率"></a>4 中国电信取得PCDN违规业务检测专利，提高检测的准确率</h3><p>金融界2024年3月21日消息，据国家知识产权局公告，中国电信股份有限公司取得一项名为“PCDN违规业务检测方法、装置、电子设备及存储介质“，授权公告号CN114389977B，申请日期为2021年12月。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.163.com/dy/article/ITQB7GF30519QIKK.html">网易新闻</a></p>
+</blockquote>
+<h3 id="5-OpenAI坚称周一不会推出搜索引擎或GPT-5"><a href="#5-OpenAI坚称周一不会推出搜索引擎或GPT-5" class="headerlink" title="5 OpenAI坚称周一不会推出搜索引擎或GPT-5"></a>5 OpenAI坚称周一不会推出搜索引擎或GPT-5</h3><p>OpenAI，这家创造了许多聊天机器人并接受了微软大量投资的公司，否认了其计划在周一发布网络搜索引擎的传言。“尽管有报道，OpenAI在周一并不会推出搜索产品或GPT-5，”一位发言人向The Register表示，关于下周初即将进行的产品更新。首席执行官奥特曼也在社交媒体上重申了这一否认。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theregister.com/2024/05/11/openai_product_search_monday/">theregister</a></p>
+</blockquote>
+<h3 id="6-Verizon-AT-T和T-Mobile的“无限”套餐刚收到了1000万美元的罚款警告"><a href="#6-Verizon-AT-T和T-Mobile的“无限”套餐刚收到了1000万美元的罚款警告" class="headerlink" title="6 Verizon, AT&amp;T和T-Mobile的“无限”套餐刚收到了1000万美元的罚款警告"></a>6 Verizon, AT&amp;T和T-Mobile的“无限”套餐刚收到了1000万美元的罚款警告</h3><p>Verizon, AT&amp;T和T-Mobile将向一组州支付总计1022万美元，以解决有关运营商对其“无限”套餐和“免费”手机优惠误导消费者的索赔。<br>Verizon、T-Mobile和AT&amp;T只有在账单周期内对用户使用数据量没有任何限制的情况下，才能将其套餐宣传为“无限”。广告必须“清晰且显眼”地说明可能会限制速度，并明确指出在触发降速前客户可以使用的数据量。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theverge.com/2024/5/10/24153892/verizon-tmobile-att-unlimited-plan-free-phone-offers-fine">The Verge</a></p>
+</blockquote>
+<h3 id="7-OpenAI-针对使用-ChatGPT-徽标向-subreddit-r-chatGPT-提出版权侵权声明——r-chatGPT-使用了官方-ChatGPT-徽标"><a href="#7-OpenAI-针对使用-ChatGPT-徽标向-subreddit-r-chatGPT-提出版权侵权声明——r-chatGPT-使用了官方-ChatGPT-徽标" class="headerlink" title="7 OpenAI 针对使用 ChatGPT 徽标向 subreddit r&#x2F;chatGPT 提出版权侵权声明——r&#x2F;chatGPT 使用了官方 ChatGPT 徽标"></a>7 OpenAI 针对使用 ChatGPT 徽标向 subreddit r&#x2F;chatGPT 提出版权侵权声明——r&#x2F;chatGPT 使用了官方 ChatGPT 徽标</h3><p>r&#x2F;ChatGPT 的版主，这是一个拥有540万成员、用于讨论ChatGPT和OpenAI的子论坛，因使用ChatGPT的徽标作为头像而收到Reddit的版权侵权通知。404媒体首次报道，r&#x2F;ChatGPT的版主在r&#x2F;ChatGPT子论坛上发布了一个点赞表情并附上了截图，写道：“我们收到了来自openai.com的版权投诉，称我们在r&#x2F;ChatGPT中未经授权使用了其版权徽标。”    </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.tomshardware.com/tech-industry/artificial-intelligence/openai-hits-subreddit-with-copyright-claim-for-using-chapgpt-logo">tom’s hardware</a></p>
+</blockquote>
+<h3 id="8-“TunnelVision”-DHCP漏洞使攻击者能绕过VPN，重定向流量"><a href="#8-“TunnelVision”-DHCP漏洞使攻击者能绕过VPN，重定向流量" class="headerlink" title="8 “TunnelVision” DHCP漏洞使攻击者能绕过VPN，重定向流量"></a>8 “TunnelVision” DHCP漏洞使攻击者能绕过VPN，重定向流量</h3><p>一种名为“TunnelVision”的新技巧利用了DHCP设计缺陷，使得攻击者能够操纵路由表，从而完全绕过本应通过虚拟专用网络（VPN）的流量，并将其重定向到不受信任的本地网络中。<br>Leviathan Security Group的研究人员在5月6日的博客文章中解释说，由于这种技巧利用的是DHCP的缺陷，并不依赖于攻破VPN技术或底层协议，因此它完全独立于VPN提供商或实现方式之外运作。   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.scmagazine.com/news/tunnelvision-dhcp-flaw-lets-attackers-bypass-vpns-redirect-traffic">SC杂志</a></p>
+</blockquote>
+<h3 id="9-日本法院裁定AI发明的装置不予授权专利"><a href="#9-日本法院裁定AI发明的装置不予授权专利" class="headerlink" title="9 日本法院裁定AI发明的装置不予授权专利"></a>9 日本法院裁定AI发明的装置不予授权专利</h3><p>就人工智能生成的发明是否能获得专利的诉讼，日本东京地方法院5月16日作出裁决，指出“发明人仅限于人类”，因而不予授权。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www3.nhk.or.jp/nhkworld/zh/news/k10014451961000/">日本放送協会</a></p>
+</blockquote>
+<h3 id="10-OpenAI发布GPT-4o"><a href="#10-OpenAI发布GPT-4o" class="headerlink" title="10 OpenAI发布GPT-4o"></a>10 OpenAI发布GPT-4o</h3><p>OpenAI 于 5 月 14 日发布了其最新的人工智能模型 GPT-4o，这不仅是该公司技术实力的一次展示，也是对整个 AI 行业的一次重要推动。GPT-4o 的响应速度极快，音频输入的平均响应时间仅为 320 毫秒，与人类对话中的自然反应时间相当。此外，GPT-4o 在多语言处理、视觉和音频理解方面的能力也有显著提升，创下了多项新的行业纪录。<br>值得一提的是，OpenAI CEO奥特曼（Sam Altman）宣布GPT-4o将对所有用户<strong>免费开放</strong>。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.sohu.com/a/779799266_472308">搜狐</a></p>
+</blockquote>
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><h3 id="人工智能时代的-Android-英文"><a href="#人工智能时代的-Android-英文" class="headerlink" title="人工智能时代的 Android(英文)"></a>人工智能时代的 Android(英文)</h3><p>文章表达了一些对安卓和AI融合的观点,不过看起来作者不是很喜欢现在安卓的AI(Gemini)<br><a target="_blank" rel="noopener" href="https://www.theverge.com/2024/5/11/24152977/android-ai-google-io-2024-gemini">跳转链接-人工智能时代的 Android(英文)</a>   </p>
+<h3 id="云时代下保护‘碎片化’的身份信息-英文"><a href="#云时代下保护‘碎片化’的身份信息-英文" class="headerlink" title="云时代下保护‘碎片化’的身份信息(英文)"></a>云时代下保护‘碎片化’的身份信息(英文)</h3><p>在云和远程工作时代，身份管理变得更加重要且充满挑战。Vivin Sathyan在RSAC上的演讲强调了以身份为中心的安全性在2024年的至关重要性，指出需通过上下文访问策略、混合活动目录系统等措施来应对因网络边界模糊和身份碎片化带来的安全威胁，并提出了包括定期风险评估、访问认证、账户管理自动化、基于角色的访问控制以及加强密码和多因素认证在内的五项应对措施。<br><a target="_blank" rel="noopener" href="https://www.scmagazine.com/news/rsac-2024-securing-fragmented-identities-in-the-cloud-age">跳转链接-Securing ‘fragmented’ identities in the cloud age</a></p>
+<h3 id="文件和驱动器上的“密码保护”安全性如何？"><a href="#文件和驱动器上的“密码保护”安全性如何？" class="headerlink" title="文件和驱动器上的“密码保护”安全性如何？"></a>文件和驱动器上的“密码保护”安全性如何？</h3><p>文章讲述了仅用密码保护文件（如PDF或Excel）并不安全，易遭破解。<br>硬件加密驱动器则通过专用微处理器提供更强防护，能有效抵抗攻击，保证数据安全，尤其适合对安全性有高要求的环境。投资硬件加密成为处理敏感数据的专业人士和机构的必要选择。<br><a target="_blank" rel="noopener" href="https://www.helpnetsecurity.com/2024/05/10/password-protect-pdf-excel-files/">跳转链接-How secure is the “Password Protection” on your files and drives?</a></p>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li>
+        
+          <li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E4%BA%8B%E6%A6%82%E8%A7%88"><span class="toc-number">1.</span> <span class="toc-text">大事概览</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-jsDelivr%E9%81%87%E5%88%B0%E8%AF%81%E4%B9%A6%E9%97%AE%E9%A2%98"><span class="toc-number">1.1.</span> <span class="toc-text">1 jsDelivr遇到证书问题</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%BF%99%E5%91%A8%E4%B8%80%E6%98%AF%E9%99%88%E7%9A%93%E5%8E%BB%E4%B8%96%E4%B8%80%E5%91%A8%E5%B9%B4"><span class="toc-number">1.2.</span> <span class="toc-text">2 这周一是陈皓去世一周年</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%AE%BF%E8%BF%81%E8%92%B2%E5%85%AC%E8%8B%B1%E6%9C%BA%E6%88%BF%E8%81%94%E9%80%9A%E6%96%B9%E5%90%91%E5%A4%B1%E8%81%94106%E5%88%86%E9%92%9F"><span class="toc-number">1.3.</span> <span class="toc-text">3 宿迁蒲公英机房联通方向失联106分钟</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%90%E5%AD%90"><span class="toc-number">2.</span> <span class="toc-text">乐子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E7%BE%8E%E8%A5%BF%E4%B8%A4%E4%B8%AA%E6%9C%88%E5%90%8E%E5%8F%AA%E8%83%BD%E7%BB%95%E8%B7%AF%E8%80%8C%E8%A1%8C"><span class="toc-number">2.1.</span> <span class="toc-text">1 美西两个月后只能绕路而行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-TikTok-%E5%B0%86%E5%88%A0%E9%99%A4%E6%9C%AA%E7%BB%8F%E6%8E%88%E6%9D%83%E7%9A%84-AI-%E8%AF%AD%E9%9F%B3%E5%85%8B%E9%9A%86%E9%9F%B3%E4%B9%90"><span class="toc-number">2.2.</span> <span class="toc-text">2 TikTok 将删除未经授权的 AI 语音克隆音乐</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E5%85%A8%E7%90%83%E6%9C%80%E5%A4%A7%E2%80%9D%E9%A3%8E%E6%8E%A7%E6%95%B0%E6%8D%AE%E5%BA%93%E2%80%9D%E8%90%BD%E5%85%A5%E7%BD%91%E7%BB%9C%E7%8A%AF%E7%BD%AA%E5%88%86%E5%AD%90%E6%89%8B%E4%B8%AD"><span class="toc-number">2.3.</span> <span class="toc-text">3 全球最大”风控数据库”落入网络犯罪分子手中</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E4%B8%AD%E5%9B%BD%E7%94%B5%E4%BF%A1%E5%8F%96%E5%BE%97PCDN%E8%BF%9D%E8%A7%84%E4%B8%9A%E5%8A%A1%E6%A3%80%E6%B5%8B%E4%B8%93%E5%88%A9%EF%BC%8C%E6%8F%90%E9%AB%98%E6%A3%80%E6%B5%8B%E7%9A%84%E5%87%86%E7%A1%AE%E7%8E%87"><span class="toc-number">2.4.</span> <span class="toc-text">4 中国电信取得PCDN违规业务检测专利，提高检测的准确率</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-OpenAI%E5%9D%9A%E7%A7%B0%E5%91%A8%E4%B8%80%E4%B8%8D%E4%BC%9A%E6%8E%A8%E5%87%BA%E6%90%9C%E7%B4%A2%E5%BC%95%E6%93%8E%E6%88%96GPT-5"><span class="toc-number">2.5.</span> <span class="toc-text">5 OpenAI坚称周一不会推出搜索引擎或GPT-5</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-Verizon-AT-T%E5%92%8CT-Mobile%E7%9A%84%E2%80%9C%E6%97%A0%E9%99%90%E2%80%9D%E5%A5%97%E9%A4%90%E5%88%9A%E6%94%B6%E5%88%B0%E4%BA%861000%E4%B8%87%E7%BE%8E%E5%85%83%E7%9A%84%E7%BD%9A%E6%AC%BE%E8%AD%A6%E5%91%8A"><span class="toc-number">2.6.</span> <span class="toc-text">6 Verizon, AT&amp;T和T-Mobile的“无限”套餐刚收到了1000万美元的罚款警告</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7-OpenAI-%E9%92%88%E5%AF%B9%E4%BD%BF%E7%94%A8-ChatGPT-%E5%BE%BD%E6%A0%87%E5%90%91-subreddit-r-chatGPT-%E6%8F%90%E5%87%BA%E7%89%88%E6%9D%83%E4%BE%B5%E6%9D%83%E5%A3%B0%E6%98%8E%E2%80%94%E2%80%94r-chatGPT-%E4%BD%BF%E7%94%A8%E4%BA%86%E5%AE%98%E6%96%B9-ChatGPT-%E5%BE%BD%E6%A0%87"><span class="toc-number">2.7.</span> <span class="toc-text">7 OpenAI 针对使用 ChatGPT 徽标向 subreddit r&#x2F;chatGPT 提出版权侵权声明——r&#x2F;chatGPT 使用了官方 ChatGPT 徽标</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#8-%E2%80%9CTunnelVision%E2%80%9D-DHCP%E6%BC%8F%E6%B4%9E%E4%BD%BF%E6%94%BB%E5%87%BB%E8%80%85%E8%83%BD%E7%BB%95%E8%BF%87VPN%EF%BC%8C%E9%87%8D%E5%AE%9A%E5%90%91%E6%B5%81%E9%87%8F"><span class="toc-number">2.8.</span> <span class="toc-text">8 “TunnelVision” DHCP漏洞使攻击者能绕过VPN，重定向流量</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#9-%E6%97%A5%E6%9C%AC%E6%B3%95%E9%99%A2%E8%A3%81%E5%AE%9AAI%E5%8F%91%E6%98%8E%E7%9A%84%E8%A3%85%E7%BD%AE%E4%B8%8D%E4%BA%88%E6%8E%88%E6%9D%83%E4%B8%93%E5%88%A9"><span class="toc-number">2.9.</span> <span class="toc-text">9 日本法院裁定AI发明的装置不予授权专利</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#10-OpenAI%E5%8F%91%E5%B8%83GPT-4o"><span class="toc-number">2.10.</span> <span class="toc-text">10 OpenAI发布GPT-4o</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="toc-number">3.</span> <span class="toc-text">推荐阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%97%B6%E4%BB%A3%E7%9A%84-Android-%E8%8B%B1%E6%96%87"><span class="toc-number">3.1.</span> <span class="toc-text">人工智能时代的 Android(英文)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%91%E6%97%B6%E4%BB%A3%E4%B8%8B%E4%BF%9D%E6%8A%A4%E2%80%98%E7%A2%8E%E7%89%87%E5%8C%96%E2%80%99%E7%9A%84%E8%BA%AB%E4%BB%BD%E4%BF%A1%E6%81%AF-%E8%8B%B1%E6%96%87"><span class="toc-number">3.2.</span> <span class="toc-text">云时代下保护‘碎片化’的身份信息(英文)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%96%87%E4%BB%B6%E5%92%8C%E9%A9%B1%E5%8A%A8%E5%99%A8%E4%B8%8A%E7%9A%84%E2%80%9C%E5%AF%86%E7%A0%81%E4%BF%9D%E6%8A%A4%E2%80%9D%E5%AE%89%E5%85%A8%E6%80%A7%E5%A6%82%E4%BD%95%EF%BC%9F"><span class="toc-number">3.3.</span> <span class="toc-text">文件和驱动器上的“密码保护”安全性如何？</span></a></li></ol></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://weekly.linuxcat.top/articles/2024-07/index.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://weekly.linuxcat.top/articles/2024-07/index.html&text=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://weekly.linuxcat.top/articles/2024-07/index.html&title=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://weekly.linuxcat.top/articles/2024-07/index.html&is_video=false&description=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linuxcat周刊(第7期) 美西两个月后只能绕路而行&body=Check out this article: https://weekly.linuxcat.top/articles/2024-07/index.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://weekly.linuxcat.top/articles/2024-07/index.html&title=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://weekly.linuxcat.top/articles/2024-07/index.html&title=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://weekly.linuxcat.top/articles/2024-07/index.html&title=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://weekly.linuxcat.top/articles/2024-07/index.html&title=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://weekly.linuxcat.top/articles/2024-07/index.html&name=Linuxcat周刊(第7期) 美西两个月后只能绕路而行&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://weekly.linuxcat.top/articles/2024-07/index.html&t=Linuxcat周刊(第7期) 美西两个月后只能绕路而行"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    mei
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li><!--
+     --><!--
+       --><li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="/assets/css/font-awesome.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdn.jsdmirror.com/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdn.jsdmirror.com/npm/clipboard@2.0.7/dist/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'ssdomei232/weekly';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-light';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

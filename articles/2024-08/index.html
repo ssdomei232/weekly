@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="大事概览Bing出现全球范围宕机5月23日下午，有不少用户反映，Bing出现了故障，无法正常搜索和登录,edge浏览器的部分功能包括集锦在内也无法使用在进行搜索后，页面会弹出一个熊猫的图案，并且很诚实的写道：“不是你的问题，是我的问题”“Bing目前不在，但一切都应该恢复正常。”此故障持续了 1 天时间 乐子1 《庆余年2》被搬到了 NPM！阿里云要被薅秃了npmmirror 核心开发者 “fen">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁">
+<meta property="og:url" content="https://weekly.linuxcat.top/articles/2024-08/index.html">
+<meta property="og:site_name" content="Linuxcat周刊">
+<meta property="og:description" content="大事概览Bing出现全球范围宕机5月23日下午，有不少用户反映，Bing出现了故障，无法正常搜索和登录,edge浏览器的部分功能包括集锦在内也无法使用在进行搜索后，页面会弹出一个熊猫的图案，并且很诚实的写道：“不是你的问题，是我的问题”“Bing目前不在，但一切都应该恢复正常。”此故障持续了 1 天时间 乐子1 《庆余年2》被搬到了 NPM！阿里云要被薅秃了npmmirror 核心开发者 “fen">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://weekly.linuxcat.top/docs/assets/2024/08/GNytLfkXQAA8GMf.jfif">
+<meta property="og:image" content="https://weekly.linuxcat.top/docs/assets/2024/08/GNyuFo1WAAAAkQa.jfif">
+<meta property="article:published_time" content="2024-06-21T11:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-04T09:08:35.849Z">
+<meta property="article:author" content="mei">
+<meta property="article:tag" content="Google">
+<meta property="article:tag" content="Bing">
+<meta property="article:tag" content="Docker">
+<meta property="article:tag" content="GFW">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://weekly.linuxcat.top/docs/assets/2024/08/GNytLfkXQAA8GMf.jfif">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+        
+      
+    
+    <!-- title -->
+    <title>Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Linuxcat周刊" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li><!--
+     --><!--
+       --><li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/articles/2024-09/index.html"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/articles/2024-07/index.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://weekly.linuxcat.top/articles/2024-08/index.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://weekly.linuxcat.top/articles/2024-08/index.html&text=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://weekly.linuxcat.top/articles/2024-08/index.html&title=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://weekly.linuxcat.top/articles/2024-08/index.html&is_video=false&description=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁&body=Check out this article: https://weekly.linuxcat.top/articles/2024-08/index.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://weekly.linuxcat.top/articles/2024-08/index.html&title=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://weekly.linuxcat.top/articles/2024-08/index.html&title=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://weekly.linuxcat.top/articles/2024-08/index.html&title=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://weekly.linuxcat.top/articles/2024-08/index.html&title=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://weekly.linuxcat.top/articles/2024-08/index.html&name=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://weekly.linuxcat.top/articles/2024-08/index.html&t=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E4%BA%8B%E6%A6%82%E8%A7%88"><span class="toc-number">1.</span> <span class="toc-text">大事概览</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bing%E5%87%BA%E7%8E%B0%E5%85%A8%E7%90%83%E8%8C%83%E5%9B%B4%E5%AE%95%E6%9C%BA"><span class="toc-number">1.1.</span> <span class="toc-text">Bing出现全球范围宕机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%90%E5%AD%90"><span class="toc-number">2.</span> <span class="toc-text">乐子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%8A%E5%BA%86%E4%BD%99%E5%B9%B42%E3%80%8B%E8%A2%AB%E6%90%AC%E5%88%B0%E4%BA%86-NPM%EF%BC%81%E9%98%BF%E9%87%8C%E4%BA%91%E8%A6%81%E8%A2%AB%E8%96%85%E7%A7%83%E4%BA%86"><span class="toc-number">2.1.</span> <span class="toc-text">1 《庆余年2》被搬到了 NPM！阿里云要被薅秃了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B0%B7%E6%AD%8C%E7%BB%88%E4%BA%8E%E8%A7%A3%E5%86%B3%E4%BA%86%E9%82%A3%E4%BA%9B%E5%A5%87%E6%80%AA%E7%9A%84AI%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C"><span class="toc-number">2.2.</span> <span class="toc-text">2 谷歌终于解决了那些奇怪的AI搜索结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BE%8E%E5%9B%BD%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E6%BF%80%E5%A2%9E%E7%9A%84%E7%94%B5%E5%8A%9B%E9%9C%80%E6%B1%82%E5%87%8F%E7%BC%93%E4%BA%86%E7%85%A4%E7%82%AD%E5%8F%91%E7%94%B5%E5%8E%82%E7%9A%84%E6%B6%88%E4%BA%A1"><span class="toc-number">2.3.</span> <span class="toc-text">3 美国数据中心激增的电力需求减缓了煤炭发电厂的消亡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Steam-%E6%B8%B8%E6%88%8F%E7%8E%A9%E5%AE%B6%E6%80%A5%E4%BA%8E%E5%8D%87%E7%BA%A7%E5%88%B0-32GB-RAM%EF%BC%8CLinux-%E5%9C%A8%E6%9C%80%E6%96%B0%E8%B0%83%E6%9F%A5%E4%B8%AD%E7%AA%81%E7%A0%B4%E4%BA%86-2-%E7%9A%84%E7%94%A8%E6%88%B7%E4%BB%BD%E9%A2%9D%E9%87%8C%E7%A8%8B%E7%A2%91"><span class="toc-number">2.4.</span> <span class="toc-text">4 Steam 游戏玩家急于升级到 32GB RAM，Linux 在最新调查中突破了 2% 的用户份额里程碑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9C%A8%E4%B8%AD%E5%9B%BD%E8%AE%BF%E9%97%AE-Docker-%E9%81%AD%E4%B8%AD%E5%9B%BD%E6%94%BF%E5%BA%9C%E5%88%B6%E8%A3%81"><span class="toc-number">2.5.</span> <span class="toc-text">5 在中国访问 Docker 遭中国政府制裁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%BE%8E%E5%9B%BD%E5%AE%A3%E5%B8%83%E5%B0%81%E7%A6%81%E4%BF%84%E7%BD%97%E6%96%AF%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6%E5%85%AC%E5%8F%B8%E5%8D%A1%E5%B7%B4%E6%96%AF%E5%9F%BA%E7%9A%84%E4%BA%A7%E5%93%81"><span class="toc-number">2.6.</span> <span class="toc-text">6 美国宣布封禁俄罗斯杀毒软件公司卡巴斯基的产品</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="toc-number">3.</span> <span class="toc-text">推荐阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%AD%E6%96%87%E5%8D%9A%E5%AE%A2%E5%80%A1%E8%AE%AE-%E4%B8%AD%E6%96%87"><span class="toc-number">3.1.</span> <span class="toc-text">1 中文博客倡议(中文)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#what%E2%80%99s-more"><span class="toc-number">4.</span> <span class="toc-text">what’s more?</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">mei</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-06-21T11:00:00.000Z" class="dt-published" itemprop="datePublished">2024-06-21</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">Linuxcat周刊</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/Bing/" rel="tag">Bing</a>, <a class="p-category" href="/tags/Docker/" rel="tag">Docker</a>, <a class="p-category" href="/tags/GFW/" rel="tag">GFW</a>, <a class="p-category" href="/tags/Google/" rel="tag">Google</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="大事概览"><a href="#大事概览" class="headerlink" title="大事概览"></a>大事概览</h2><h3 id="Bing出现全球范围宕机"><a href="#Bing出现全球范围宕机" class="headerlink" title="Bing出现全球范围宕机"></a>Bing出现全球范围宕机</h3><p>5月23日下午，有不少用户反映，Bing出现了故障，无法正常搜索和登录,edge浏览器的部分功能包括集锦在内也无法使用<br>在进行搜索后，页面会弹出一个熊猫的图案，并且很诚实的写道：“不是你的问题，是我的问题”“Bing目前不在，但一切都应该恢复正常。”<br>此故障持续了 1 天时间</p>
+<h2 id="乐子"><a href="#乐子" class="headerlink" title="乐子"></a>乐子</h2><h3 id="1-《庆余年2》被搬到了-NPM！阿里云要被薅秃了"><a href="#1-《庆余年2》被搬到了-NPM！阿里云要被薅秃了" class="headerlink" title="1 《庆余年2》被搬到了 NPM！阿里云要被薅秃了"></a>1 《庆余年2》被搬到了 NPM！阿里云要被薅秃了</h3><p>npmmirror 核心开发者 “fengmk2” 在社区 X 上表示，有小哥竟利用 NPM 的一些机制，将《庆余年2》整套高清视频搬上来了，不得不将 unpkg 新增文件功能停止<br>fengmk2 随后表示 “为了避免此功能被滥用，对于新增的 npm 包不会默认开启 unpkg 功能，如果你新发布的 npm 包也希望开启此功能，请参考 README 文档描述提交白名单“<br><img src="/docs/assets/2024/08/GNytLfkXQAA8GMf.jfif" alt="为了无法计算的损失1" title="为了无法计算的损失1"><br><img src="/docs/assets/2024/08/GNyuFo1WAAAAkQa.jfif" alt="为了无法计算的损失2" title="为了无法计算的损失2"><br><a href="/docs/assets/2024/08/playlist.m3u8">playlist.m3u8</a>     </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://x.com/fengmk2/status/1791498406923215020">X</a></p>
+</blockquote>
+<h3 id="2-谷歌终于解决了那些奇怪的AI搜索结果"><a href="#2-谷歌终于解决了那些奇怪的AI搜索结果" class="headerlink" title="2 谷歌终于解决了那些奇怪的AI搜索结果"></a>2 谷歌终于解决了那些奇怪的AI搜索结果</h3><p>基本上，当你使用谷歌在网页上搜索某些内容，或者向它提问时，这个科技巨头可能会使用其Gemini AI大型模型自动在结果页面顶部为你的查询生成一个答案。这个答案应该基于网络对你尝试查找的主题的讨论。而不是点击搜索结果链接到页面上查找信息，网民们在结果页面上直接提供了一个由AI制作的该信息摘要。<br>谷歌有时会给出荒谬和无意义的答案,在两个特别引人注目的例子中，如果是真的，AI概览说人们“应该每天吃一块小石头”，并且通过在酱料中添加“无毒胶水”可以解决奶酪不粘在披萨上的问题。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theregister.com/2024/05/31/google_ai_search_update/">theregister</a></p>
+</blockquote>
+<h3 id="3-美国数据中心激增的电力需求减缓了煤炭发电厂的消亡"><a href="#3-美国数据中心激增的电力需求减缓了煤炭发电厂的消亡" class="headerlink" title="3 美国数据中心激增的电力需求减缓了煤炭发电厂的消亡"></a>3 美国数据中心激增的电力需求减缓了煤炭发电厂的消亡</h3><p>能源市场分析公司标准普尔全球商品洞察（S&amp;P Global Commodity Insights）指出，到2030年，美国煤炭产业预计只有54吉瓦的产能将被关闭——比去年7月的预测下降了40%。到2050年退役的煤电厂总数预计仍然大致相同，但从现在开始到本十年末的退役速度将大大慢于去年的估计。<br>煤电厂可以将其新的生命归功于数据中心行业，该行业正在扩建和升级现有的数据中心以及建设新的设施。人工智能时代需要大量的能源——根据国际能源署（IEA）1月份的报告，仅由人工智能驱动的谷歌搜索预计就会使用比更传统信息请求多十倍的电力。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theregister.com/2024/05/31/datacenter_power_crunch/">theverge</a></p>
+</blockquote>
+<h3 id="4-Steam-游戏玩家急于升级到-32GB-RAM，Linux-在最新调查中突破了-2-的用户份额里程碑"><a href="#4-Steam-游戏玩家急于升级到-32GB-RAM，Linux-在最新调查中突破了-2-的用户份额里程碑" class="headerlink" title="4 Steam 游戏玩家急于升级到 32GB RAM，Linux 在最新调查中突破了 2% 的用户份额里程碑"></a>4 Steam 游戏玩家急于升级到 32GB RAM，Linux 在最新调查中突破了 2% 的用户份额里程碑</h3><p>Steam刚刚发布了其<a target="_blank" rel="noopener" href="https://store.steampowered.com/hwsurvey/Steam-Hardware-Software-Survey-Welcome-to-Steam">月度硬件调查</a>，其中有一些值得注意的趋势值得评论。虽然大多数 Steam 用户拥有 16GB 的 RAM （47.08%），但也有很多人正在迅速迁移到 32GB。拥有 32GB 的用户仍然以 28.72% 位居第二，但与上个月相比，这一数字增长了 0.63%，这是 Steam 列表中所有 RAM 配置中增幅最大的。<br>我们看到 Linux 最近的增长最令人印象深刻，其 Steam 用户群从上个月的 1.9% 增加到 2.32%，增长了 0.42%。虽然与 Windows 用户增长相比，它仍然没有那么大，但 Linux 用户数量很少（与 Windows 相比）意味着这对社区来说是一个重大变化。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.tomshardware.com/video-games/pc-gaming/steam-gamers-hurry-to-upgrade-to-32gb-ram-and-linux-breaks-above-2-user-share-milestone-in-latest-survey">tom’s hardware</a></p>
+</blockquote>
+<h3 id="5-在中国访问-Docker-遭中国政府制裁"><a href="#5-在中国访问-Docker-遭中国政府制裁" class="headerlink" title="5 在中国访问 Docker 遭中国政府制裁"></a>5 在中国访问 Docker 遭中国政府制裁</h3><p>6月6日，SJTUG（上海交通大学 Linux 用户组）发布公告称：“即时起中止对 Docker Hub 仓库的镜像。Docker 相关工具默认会自动处理失效镜像的回退，如果对官方源有访问困难问题，建议尝试使用其他仍在服务的镜像源。”<br>晚些时候，南京大学开源镜像站的 Docker Hub 镜像也宣布停止服务，目前相关新闻及通知均已撤回<br>目前 Docker Hub 以及 Docker 所有官方网站均已遭到 GFW 的阻断及污染，无法访问<br>小道消息称：“收到上面信息监管的最新要求，国内所有 Docker 的镜像服务器必须全部下架。后续包括 Github CDN 镜像，NPM，Pypi 等未经内容审查的镜像服务器一律下架”<br>目前已经有了很多解决方案：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/tech-shrimp/docker_image_pusher">docker_image_pusher</a></li>
+<li><a target="_blank" rel="noopener" href="https://bbs.fit2cloud.com/t/topic/5886">Docker Hub 无法访问：应用安装失败，镜像拉取超时的临时解决方案</a></li>
+</ul>
+<p>在此，对方滨兴教授表达美好的问候，同时对中国政府的行为表达强烈谴责</p>
+<h3 id="6-美国宣布封禁俄罗斯杀毒软件公司卡巴斯基的产品"><a href="#6-美国宣布封禁俄罗斯杀毒软件公司卡巴斯基的产品" class="headerlink" title="6 美国宣布封禁俄罗斯杀毒软件公司卡巴斯基的产品"></a>6 美国宣布封禁俄罗斯杀毒软件公司卡巴斯基的产品</h3><p>当地时间6月20日，美国商务部长吉娜·雷蒙多宣布，出于对美国国家安全的考虑，政府将采取措施禁止美国公司和公民使用俄罗斯杀毒软件公司卡巴斯基开发的产品。雷蒙多表示，美国政府将采取行动，禁止卡巴斯基实验室及其所有附属公司、子公司和母公司在美国提供网络安全和防病毒软件，并将三家卡巴斯基相关实体添加到“实体名单”中，以使其无法在美国销售或更新软件。</p>
+<blockquote>
+<p>消息来源： LoopDNS 资讯播报</p>
+</blockquote>
+<h2 id="推荐阅读"><a href="#推荐阅读" class="headerlink" title="推荐阅读"></a>推荐阅读</h2><h3 id="1-中文博客倡议-中文"><a href="#1-中文博客倡议-中文" class="headerlink" title="1 中文博客倡议(中文)"></a>1 中文博客倡议(中文)</h3><p>列举了中文博客应该如何建设,如何提升游客体验的倡议<br><a target="_blank" rel="noopener" href="https://github.com/HowieHz/chinese-blog-guidelines">跳转链接: 中文博客倡议(中文)</a></p>
+<h2 id="what’s-more"><a href="#what’s-more" class="headerlink" title="what’s more?"></a>what’s more?</h2><p>在中考（6月12日）完后，周刊成功复活，本次预计持续更新8周左右，每周五晚7点发布</p>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li>
+        
+          <li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A4%A7%E4%BA%8B%E6%A6%82%E8%A7%88"><span class="toc-number">1.</span> <span class="toc-text">大事概览</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Bing%E5%87%BA%E7%8E%B0%E5%85%A8%E7%90%83%E8%8C%83%E5%9B%B4%E5%AE%95%E6%9C%BA"><span class="toc-number">1.1.</span> <span class="toc-text">Bing出现全球范围宕机</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%90%E5%AD%90"><span class="toc-number">2.</span> <span class="toc-text">乐子</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E3%80%8A%E5%BA%86%E4%BD%99%E5%B9%B42%E3%80%8B%E8%A2%AB%E6%90%AC%E5%88%B0%E4%BA%86-NPM%EF%BC%81%E9%98%BF%E9%87%8C%E4%BA%91%E8%A6%81%E8%A2%AB%E8%96%85%E7%A7%83%E4%BA%86"><span class="toc-number">2.1.</span> <span class="toc-text">1 《庆余年2》被搬到了 NPM！阿里云要被薅秃了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E8%B0%B7%E6%AD%8C%E7%BB%88%E4%BA%8E%E8%A7%A3%E5%86%B3%E4%BA%86%E9%82%A3%E4%BA%9B%E5%A5%87%E6%80%AA%E7%9A%84AI%E6%90%9C%E7%B4%A2%E7%BB%93%E6%9E%9C"><span class="toc-number">2.2.</span> <span class="toc-text">2 谷歌终于解决了那些奇怪的AI搜索结果</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E7%BE%8E%E5%9B%BD%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E6%BF%80%E5%A2%9E%E7%9A%84%E7%94%B5%E5%8A%9B%E9%9C%80%E6%B1%82%E5%87%8F%E7%BC%93%E4%BA%86%E7%85%A4%E7%82%AD%E5%8F%91%E7%94%B5%E5%8E%82%E7%9A%84%E6%B6%88%E4%BA%A1"><span class="toc-number">2.3.</span> <span class="toc-text">3 美国数据中心激增的电力需求减缓了煤炭发电厂的消亡</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-Steam-%E6%B8%B8%E6%88%8F%E7%8E%A9%E5%AE%B6%E6%80%A5%E4%BA%8E%E5%8D%87%E7%BA%A7%E5%88%B0-32GB-RAM%EF%BC%8CLinux-%E5%9C%A8%E6%9C%80%E6%96%B0%E8%B0%83%E6%9F%A5%E4%B8%AD%E7%AA%81%E7%A0%B4%E4%BA%86-2-%E7%9A%84%E7%94%A8%E6%88%B7%E4%BB%BD%E9%A2%9D%E9%87%8C%E7%A8%8B%E7%A2%91"><span class="toc-number">2.4.</span> <span class="toc-text">4 Steam 游戏玩家急于升级到 32GB RAM，Linux 在最新调查中突破了 2% 的用户份额里程碑</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E5%9C%A8%E4%B8%AD%E5%9B%BD%E8%AE%BF%E9%97%AE-Docker-%E9%81%AD%E4%B8%AD%E5%9B%BD%E6%94%BF%E5%BA%9C%E5%88%B6%E8%A3%81"><span class="toc-number">2.5.</span> <span class="toc-text">5 在中国访问 Docker 遭中国政府制裁</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E7%BE%8E%E5%9B%BD%E5%AE%A3%E5%B8%83%E5%B0%81%E7%A6%81%E4%BF%84%E7%BD%97%E6%96%AF%E6%9D%80%E6%AF%92%E8%BD%AF%E4%BB%B6%E5%85%AC%E5%8F%B8%E5%8D%A1%E5%B7%B4%E6%96%AF%E5%9F%BA%E7%9A%84%E4%BA%A7%E5%93%81"><span class="toc-number">2.6.</span> <span class="toc-text">6 美国宣布封禁俄罗斯杀毒软件公司卡巴斯基的产品</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8E%A8%E8%8D%90%E9%98%85%E8%AF%BB"><span class="toc-number">3.</span> <span class="toc-text">推荐阅读</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E4%B8%AD%E6%96%87%E5%8D%9A%E5%AE%A2%E5%80%A1%E8%AE%AE-%E4%B8%AD%E6%96%87"><span class="toc-number">3.1.</span> <span class="toc-text">1 中文博客倡议(中文)</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#what%E2%80%99s-more"><span class="toc-number">4.</span> <span class="toc-text">what’s more?</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://weekly.linuxcat.top/articles/2024-08/index.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://weekly.linuxcat.top/articles/2024-08/index.html&text=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://weekly.linuxcat.top/articles/2024-08/index.html&title=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://weekly.linuxcat.top/articles/2024-08/index.html&is_video=false&description=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁&body=Check out this article: https://weekly.linuxcat.top/articles/2024-08/index.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://weekly.linuxcat.top/articles/2024-08/index.html&title=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://weekly.linuxcat.top/articles/2024-08/index.html&title=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://weekly.linuxcat.top/articles/2024-08/index.html&title=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://weekly.linuxcat.top/articles/2024-08/index.html&title=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://weekly.linuxcat.top/articles/2024-08/index.html&name=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://weekly.linuxcat.top/articles/2024-08/index.html&t=Linuxcat周刊(第8期) 在中国访问 Docker 遭中国政府制裁"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    mei
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li><!--
+     --><!--
+       --><li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="/assets/css/font-awesome.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdn.jsdmirror.com/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdn.jsdmirror.com/npm/clipboard@2.0.7/dist/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'ssdomei232/weekly';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-light';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang=zh>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="1 腾讯云全球性故障 74 分钟2024年04月08日，腾讯云出现了一场全球性的大故障，用腾讯云官方的说法，崩了 74 分钟（15:31 - 16:45），波及全球 17 个区域与数十款服务。这次的故障几乎是去年阿里云双十一史诗级大故障的翻版 —— 小道消息是整个管控面 GG，云 API 挂了，所以现象与去年阿里云如出一辙：依赖云 API 的云产品控制台不能用了。目前可以以此次故障为由向客服索要1">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟">
+<meta property="og:url" content="https://weekly.linuxcat.top/articles/2024-04/index.html">
+<meta property="og:site_name" content="Linuxcat周刊">
+<meta property="og:description" content="1 腾讯云全球性故障 74 分钟2024年04月08日，腾讯云出现了一场全球性的大故障，用腾讯云官方的说法，崩了 74 分钟（15:31 - 16:45），波及全球 17 个区域与数十款服务。这次的故障几乎是去年阿里云双十一史诗级大故障的翻版 —— 小道消息是整个管控面 GG，云 API 挂了，所以现象与去年阿里云如出一辙：依赖云 API 的云产品控制台不能用了。目前可以以此次故障为由向客服索要1">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2024-04-14T04:00:00.000Z">
+<meta property="article:modified_time" content="2024-07-04T09:08:05.327Z">
+<meta property="article:author" content="mei">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="网络安全">
+<meta property="article:tag" content="Google">
+<meta property="article:tag" content="存储">
+<meta property="article:tag" content="云服务">
+<meta property="article:tag" content="防火墙">
+<meta property="article:tag" content="TLS证书">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/images/favicon.ico" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon.ico">
+        
+      
+    
+    <!-- title -->
+    <title>Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+      <link rel="alternate" href="/true" title="Linuxcat周刊" type="application/atom+xml" />
+    
+	<!-- mathjax -->
+	
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="目录"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="顶部" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li><!--
+     --><!--
+       --><li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        <li><a class="icon" aria-label="上一篇" href="/articles/2024-05/index.html"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
+        
+        <li><a class="icon" aria-label="下一篇" href="/2024-03/index.html"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="返回顶部" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="分享文章" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">上一篇</span>
+      <span id="i-next" class="info" style="display:none;">下一篇</span>
+      <span id="i-top" class="info" style="display:none;">返回顶部</span>
+      <span id="i-share" class="info" style="display:none;">分享文章</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://weekly.linuxcat.top/articles/2024-04/index.html"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://weekly.linuxcat.top/articles/2024-04/index.html&text=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://weekly.linuxcat.top/articles/2024-04/index.html&title=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://weekly.linuxcat.top/articles/2024-04/index.html&is_video=false&description=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟&body=Check out this article: https://weekly.linuxcat.top/articles/2024-04/index.html"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://weekly.linuxcat.top/articles/2024-04/index.html&title=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://weekly.linuxcat.top/articles/2024-04/index.html&title=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://weekly.linuxcat.top/articles/2024-04/index.html&title=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://weekly.linuxcat.top/articles/2024-04/index.html&title=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://weekly.linuxcat.top/articles/2024-04/index.html&name=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://weekly.linuxcat.top/articles/2024-04/index.html&t=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%85%A8%E7%90%83%E6%80%A7%E6%95%85%E9%9A%9C-74-%E5%88%86%E9%92%9F"><span class="toc-number">1.</span> <span class="toc-text">1 腾讯云全球性故障 74 分钟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%88%B1%E5%B0%94%E5%85%B0%E7%9A%84%E7%94%B5%E5%8A%9B%E7%B4%A7%E7%BC%A9%E5%8F%AF%E8%83%BD%E4%BF%83%E4%BD%BFAWS%E5%AF%B9%E8%AE%A1%E7%AE%97%E8%B5%84%E6%BA%90%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BB%99"><span class="toc-number">2.</span> <span class="toc-text">2 爱尔兰的电力紧缩可能促使AWS对计算资源进行配给</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%80%9D%E7%A7%91%E5%AE%A3%E5%B8%83%E5%AE%8C%E6%88%90%E5%AF%B9Splunk%E7%9A%84%E6%94%B6%E8%B4%AD"><span class="toc-number">3.</span> <span class="toc-text">3 思科宣布完成对Splunk的收购</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Google-One-VPN-%E6%9C%8D%E5%8A%A1%E5%8D%B3%E5%B0%86%E8%B5%B0%E5%90%91-Google-%E7%9A%84%E5%9D%9F%E5%9C%BA"><span class="toc-number">4.</span> <span class="toc-text">4 Google One VPN 服务即将走向 Google 的坟场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-APT-2-9-%E5%8F%91%E5%B8%83%EF%BC%9ADebian-%E7%9A%84-APT-3-0-%E5%B0%86%E6%8B%A5%E6%9C%89%E5%B8%A6%E6%9C%89%E9%A2%9C%E8%89%B2%E3%80%81%E6%9F%B1%E5%BC%8F%E6%98%BE%E7%A4%BA%E7%AD%89%E7%9A%84%E6%96%B0-UI"><span class="toc-number">5.</span> <span class="toc-text">5 APT 2.9 发布：Debian 的 APT 3.0 将拥有带有颜色、柱式显示等的新 UI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%A6%96%E9%83%A8%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%94%9F%E6%88%90%E7%9A%84%E6%B5%AA%E6%BC%AB%E5%96%9C%E5%89%A7%E7%94%B5%E5%BD%B1%E5%B0%86%E4%BA%8E%E4%BB%8A%E5%B9%B4%E5%A4%8F%E5%A4%A9%E4%B8%8A%E6%98%A0%E2%80%94%E2%80%94%E9%A2%84%E5%91%8A%E7%89%87%E7%AE%80%E7%9B%B4%E8%AE%A9%E9%9C%8D%E5%B0%94%E9%A9%AC%E5%85%8B%E9%A2%91%E9%81%93%E6%97%A0%E5%9C%B0%E8%87%AA%E5%AE%B9"><span class="toc-number">6.</span> <span class="toc-text">6 首部人工智能生成的浪漫喜剧电影将于今年夏天上映——预告片简直让霍尔马克频道无地自容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E7%94%B1%E4%BA%8E%E7%BE%8E%E5%9B%BD%E7%9A%84%E5%88%B6%E8%A3%81%EF%BC%8C%E4%B8%AD%E5%9B%BD%E6%B8%B8%E6%88%8F%E7%8E%A9%E5%AE%B6%E5%8F%AF%E8%83%BD%E6%97%A0%E6%B3%95%E5%AF%B9RTX-4090%E6%98%BE%E5%8D%A1%E8%BF%9B%E8%A1%8CRMA%EF%BC%88%E5%95%86%E5%93%81%E9%80%80%E8%B4%A7%E6%8E%88%E6%9D%83%EF%BC%89%E6%9C%8D%E5%8A%A1"><span class="toc-number">7.</span> <span class="toc-text">7 由于美国的制裁，中国游戏玩家可能无法对RTX 4090显卡进行RMA（商品退货授权）服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E8%8A%AF%E7%89%87%E5%88%B6%E9%80%A0%E5%95%86%E6%AD%A3%E4%B8%93%E6%B3%A8%E4%BA%8E%E8%BE%B9%E7%BC%98%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%88Edge-AI%EF%BC%89%E7%9A%84%E5%8F%91%E5%B1%95"><span class="toc-number">8.</span> <span class="toc-text">8 芯片制造商正专注于边缘人工智能（Edge AI）的发展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E9%A2%84%E8%AE%A1%E5%9C%A82025%E5%B9%B4%EF%BC%8CSD%E5%8D%A1%E7%9A%84%E5%AE%B9%E9%87%8F%E6%9C%80%E7%BB%88%E8%BE%BE%E5%88%B04TB"><span class="toc-number">9.</span> <span class="toc-text">9 预计在2025年，SD卡的容量最终达到4TB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E2%80%9C%E8%83%BD%E5%8A%9B%E9%AB%98%E8%B6%85%E2%80%9D%E7%9A%84%E9%BB%91%E5%AE%A2%E5%88%A9%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%990-day%E6%BC%8F%E6%B4%9E%E5%85%A5%E4%BE%B5%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%9C"><span class="toc-number">10.</span> <span class="toc-text">10 “能力高超”的黑客利用防火墙0-day漏洞入侵企业网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E6%96%B0%E5%9E%8BRhadamanthys%E6%94%BB%E5%87%BB%E6%B4%BB%E5%8A%A8%E4%B8%AD%E7%96%91%E4%BC%BC%E4%BD%BF%E7%94%A8AI%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81"><span class="toc-number">11.</span> <span class="toc-text">11 新型Rhadamanthys攻击活动中疑似使用AI生成代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E8%B0%B7%E6%AD%8C%E7%9A%8490%E5%A4%A9TLS%E8%AF%81%E4%B9%A6%E6%9C%89%E6%95%88%E6%9C%9F%E6%8F%90%E6%A1%88%E5%B0%86%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E4%BC%81%E4%B8%9A"><span class="toc-number">12.</span> <span class="toc-text">12 谷歌的90天TLS证书有效期提案将如何影响企业</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">mei</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-04-14T04:00:00.000Z" class="dt-published" itemprop="datePublished">2024-04-14</time>
+        
+      
+    </div>
+
+
+      
+    <div class="article-category">
+        <i class="fa-solid fa-archive"></i>
+        <a class="category-link" href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">Linuxcat周刊</a>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/tags/AI/" rel="tag">AI</a>, <a class="p-category" href="/tags/Google/" rel="tag">Google</a>, <a class="p-category" href="/tags/TLS%E8%AF%81%E4%B9%A6/" rel="tag">TLS证书</a>, <a class="p-category" href="/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/" rel="tag">云服务</a>, <a class="p-category" href="/tags/%E5%AD%98%E5%82%A8/" rel="tag">存储</a>, <a class="p-category" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" rel="tag">网络安全</a>, <a class="p-category" href="/tags/%E9%98%B2%E7%81%AB%E5%A2%99/" rel="tag">防火墙</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="1-腾讯云全球性故障-74-分钟"><a href="#1-腾讯云全球性故障-74-分钟" class="headerlink" title="1 腾讯云全球性故障 74 分钟"></a>1 腾讯云全球性故障 74 分钟</h2><p>2024年04月08日，腾讯云出现了一场全球性的大故障，用腾讯云官方的说法，崩了 74 分钟（15:31 - 16:45），波及全球 17 个区域与数十款服务。<br>这次的故障几乎是去年阿里云双十一史诗级大故障的翻版 —— 小道消息是整个管控面 GG，云 API 挂了，所以现象与去年阿里云如出一辙：依赖云 API 的云产品控制台不能用了。<br>目前可以以此次故障为由向客服索要100元代金券,如果业务大可以要888元代金券   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s/PgduTGIvWSUgHZhVfnb7Bg">微信公众号@非法加冯</a></p>
+</blockquote>
+<h2 id="2-爱尔兰的电力紧缩可能促使AWS对计算资源进行配给"><a href="#2-爱尔兰的电力紧缩可能促使AWS对计算资源进行配给" class="headerlink" title="2 爱尔兰的电力紧缩可能促使AWS对计算资源进行配给"></a>2 爱尔兰的电力紧缩可能促使AWS对计算资源进行配给</h2><p>爱尔兰的数据中心电力问题可能正在达到顶峰，因为客户报告称亚马逊正在限制用户可以在该国启动的资源，甚至将他们定向到欧洲的其他AWS区域。<br>“您无法在 AWS Dublin 中启动 GPU 节点，因为这些位置的功耗已达到极限。EC2 有预留容量以防万一”</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theregister.com/2024/04/09/aws_resource_restrictions">The Register</a></p>
+</blockquote>
+<h2 id="3-思科宣布完成对Splunk的收购"><a href="#3-思科宣布完成对Splunk的收购" class="headerlink" title="3 思科宣布完成对Splunk的收购"></a>3 思科宣布完成对Splunk的收购</h2><p>2024年3月19日,思科宣布完成对网络安全软件公司Splunk的收购，令思科具备更强的基础得以服务客户，为客户的完整数字化足迹提供卓越的可见性和洞察力。<br>在此之后,若将两家销售额相加,思科将是防火墙领域毫无疑问的老大</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.splunk.com/zh_cn/newsroom/press-releases/2024/cisco-completes-acquisition-of-splunk.html">splunk</a></p>
+</blockquote>
+<h2 id="4-Google-One-VPN-服务即将走向-Google-的坟场"><a href="#4-Google-One-VPN-服务即将走向-Google-的坟场" class="headerlink" title="4 Google One VPN 服务即将走向 Google 的坟场"></a>4 Google One VPN 服务即将走向 Google 的坟场</h2><p>根据 Android Authority 看到的一封含糊不清的客户电子邮件，谷歌正在关闭其 VPN by Google One 服务，距离 2020 年 10 月推出不到四年。这封电子邮件没有具体说明何时会发生这种情况，只是说VPN服务将在“今年晚些时候”停止。<br>Google One 的 VPN 是 Google One 云存储服务宣布其用户达到 1 亿用户里程碑几周后被扔进臭名昭著的“Google 墓地”的最新产品。谷歌在其关闭电子邮件中提到，VPN正在逐步淘汰，以“专注于提供最需要的功能和优势”，这可能与该公司正在向Google One推出的所有Gemini AI产品有关。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.theverge.com/2024/4/12/24128177/google-one-vpn-service-shutdown-announcement-graveyard">The Verge</a></p>
+</blockquote>
+<h2 id="5-APT-2-9-发布：Debian-的-APT-3-0-将拥有带有颜色、柱式显示等的新-UI"><a href="#5-APT-2-9-发布：Debian-的-APT-3-0-将拥有带有颜色、柱式显示等的新-UI" class="headerlink" title="5 APT 2.9 发布：Debian 的 APT 3.0 将拥有带有颜色、柱式显示等的新 UI"></a>5 APT 2.9 发布：Debian 的 APT 3.0 将拥有带有颜色、柱式显示等的新 UI</h2><p>APT 作为围绕 Debian Linux 构建的打包工具，正在着手对 APT 2.9 开发系列进行一些重大升级，然后作为 APT 3.0 推出。新 APT 的命令行用户界面有了很大的改进，从我最初的周五晚上遇到它来看，它肯定看起来不错。<br>“欢迎来到 APT 3.0 开发系列。它为 apt（8） 提供了新的 UI。它具有颜色、柱状显示、更多填充功能，并最后显示删除内容（关闭：#755088），使输出更易于快速扫描。”</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.phoronix.com/news/Debian-APT-2.9-Released">phoronix</a></p>
+</blockquote>
+<h2 id="6-首部人工智能生成的浪漫喜剧电影将于今年夏天上映——预告片简直让霍尔马克频道无地自容"><a href="#6-首部人工智能生成的浪漫喜剧电影将于今年夏天上映——预告片简直让霍尔马克频道无地自容" class="headerlink" title="6 首部人工智能生成的浪漫喜剧电影将于今年夏天上映——预告片简直让霍尔马克频道无地自容"></a>6 首部人工智能生成的浪漫喜剧电影将于今年夏天上映——预告片简直让霍尔马克频道无地自容</h2><p>这家受欢迎的电视公司的第一个原创功能是用 Runway ML 和 Midjourney 制作的。<br>这部由TCL公司出品的原创电影预告片展示了两位年轻迷人的美国人在前往巴黎的火车上相遇并坠入爱河的故事。<br>该片将于今年夏天上映，并在TCLtv+免费流媒体应用上播出，该应用可在搭载Google TV OS的TCL电视上使用。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.tomshardware.com/tech-industry/artificial-intelligence/first-ai-generated-rom-com-is-due-this-summer-and-the-trailer-puts-hallmark-channel-to-shame">tom’s hardware</a></p>
+</blockquote>
+<h2 id="7-由于美国的制裁，中国游戏玩家可能无法对RTX-4090显卡进行RMA（商品退货授权）服务"><a href="#7-由于美国的制裁，中国游戏玩家可能无法对RTX-4090显卡进行RMA（商品退货授权）服务" class="headerlink" title="7 由于美国的制裁，中国游戏玩家可能无法对RTX 4090显卡进行RMA（商品退货授权）服务"></a>7 由于美国的制裁，中国游戏玩家可能无法对RTX 4090显卡进行RMA（商品退货授权）服务</h2><p>根据美国政府实施的最新出口规则条款，如果没有美国商务部的出口许可证，AMD、英特尔和英伟达不能再向中国和其他一些国家运送他们的一些高性能处理器。事实上，限制如此严格，以至于英伟达AD102处理器的出货量也受到限制，这可能会对GeForce RTX 4090显卡的供应产生影响。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.tomshardware.com/news/us-govt-restricts-shipments-of-geforce-rtx-4090-to-china-other-countries">tom’s hardware</a></p>
+</blockquote>
+<h2 id="8-芯片制造商正专注于边缘人工智能（Edge-AI）的发展"><a href="#8-芯片制造商正专注于边缘人工智能（Edge-AI）的发展" class="headerlink" title="8 芯片制造商正专注于边缘人工智能（Edge AI）的发展"></a>8 芯片制造商正专注于边缘人工智能（Edge AI）的发展</h2><p>近期，Arm、Intel和NVIDIA纷纷推出了新型CPU、GPU和NPU，旨在推动边缘计算和应用程序开发的发展。<br>人工智能工作负载正在迅速流向网络边缘，这加速了对于更多计算能力的需求，老牌芯片制造商和初创公司都竞相满足这一需求。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://thenewstack.io/chipmakers-putting-a-laser-focus-on-edge-ai/">thenewstack</a></p>
+</blockquote>
+<h2 id="9-预计在2025年，SD卡的容量最终达到4TB"><a href="#9-预计在2025年，SD卡的容量最终达到4TB" class="headerlink" title="9 预计在2025年，SD卡的容量最终达到4TB"></a>9 预计在2025年，SD卡的容量最终达到4TB</h2><p>西部数据计划明年发布首款4TB SD卡。周四，这家存储公司宣布计划在下周亲自展示这款产品。<br>西部数据将推出这款SD卡，该产品遵循SD协会的Secure Digital Ultra Capacity（SDUC）标准，并将在其SanDisk品牌下销售，主要面向“复杂的媒体和娱乐工作流程”，例如使用相机和笔记本电脑拍摄高分辨率和高帧率视频，公告中提到。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://arstechnica.com/gadgets/2024/04/sd-cards-finally-expected-to-hit-4tb-in-2025/">arstechnica</a></p>
+</blockquote>
+<h2 id="10-“能力高超”的黑客利用防火墙0-day漏洞入侵企业网络"><a href="#10-“能力高超”的黑客利用防火墙0-day漏洞入侵企业网络" class="headerlink" title="10 “能力高超”的黑客利用防火墙0-day漏洞入侵企业网络"></a>10 “能力高超”的黑客利用防火墙0-day漏洞入侵企业网络</h2><p>Palo Alto Networks防火墙中存在的一个未经身份验证的代码执行漏洞，目前尚无补丁可用，导致黑客利用这一0-day漏洞成功入侵了多家企业网络。据悉，这些黑客具备高超的技术能力，能够精准地利用防火墙的安全漏洞，进而获得对目标网络的完全控制权。<br>该漏洞存在于Palo Alto Networks的防火墙产品中，黑客通过发送特制的网络请求，能够绕过防火墙的身份验证机制，并在目标系统上执行恶意代码。由于该漏洞尚未被官方发现并修复，因此成为黑客攻击企业网络的利器。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://arstechnica.com/security/2024/04/highly-capable-hackers-root-corporate-networks-by-exploiting-firewall-0-day/">arstechnica</a></p>
+</blockquote>
+<h2 id="11-新型Rhadamanthys攻击活动中疑似使用AI生成代码"><a href="#11-新型Rhadamanthys攻击活动中疑似使用AI生成代码" class="headerlink" title="11 新型Rhadamanthys攻击活动中疑似使用AI生成代码"></a>11 新型Rhadamanthys攻击活动中疑似使用AI生成代码</h2><p>周三，研究人员揭示，在最近的一次传播Rhadamanthys信息窃取软件的活动中，可能使用了AI生成的恶意软件。Proofpoint的研究人员在博客文章中写道，用于解码base64编码的窃取软件并在内存中执行的PowerShell脚本包含异常详细的注释，这可能是使用大型语言模型（LLM）如OpenAI的ChatGPT、Google的Gemini或Microsoft的Copilot生成代码的标志。<br>该脚本及伴随的Rhadamanthys有效载荷被发现是一个威胁行动者及疑似初始访问代理（IAB）TA547发起的恶意邮件活动的一部分。该活动通过冒充名为Metro的零售公司向数十家德国企业发送钓鱼邮件。</p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.scmagazine.com/news/ai-generated-code-potentially-used-in-new-rhadamanthys-campaign">SC杂志</a></p>
+</blockquote>
+<h2 id="12-谷歌的90天TLS证书有效期提案将如何影响企业"><a href="#12-谷歌的90天TLS证书有效期提案将如何影响企业" class="headerlink" title="12 谷歌的90天TLS证书有效期提案将如何影响企业"></a>12 谷歌的90天TLS证书有效期提案将如何影响企业</h2><p>去年，谷歌提出了将TLS（传输层安全性）证书的有效期从13个月缩短至90天的提案，该提案可能在不久的将来实施。这确实可以提高安全性，并缩小攻击者利用被盗或被篡改的证书和私钥的机会窗口。但不幸的是，这也将大幅增加管理TLS证书所需的时间和精力。<br>由于TLS证书的有效期缩短至90天，使用手动流程来大规模续订和部署证书将变得不可能。为了支持DevOps团队不断交付新应用程序和功能的速度和灵活性，自动化将是必要的。   </p>
+<blockquote>
+<p>消息来源: <a target="_blank" rel="noopener" href="https://www.helpnetsecurity.com/2024/04/11/tls-certificate-renewal-proposal/">helpnetsecurity</a>   </p>
+</blockquote>
+<blockquote>
+<p>评价:阿里云和腾讯云的90天证书看起来又香起来了,不过Google你是来干啥的?</p>
+</blockquote>
+
+  </div>
+</article>
+
+
+    <div class="blog-post-comments">
+        <div id="utterances_thread">
+            <noscript>加载评论需要在浏览器启用 JavaScript 脚本支持。</noscript>
+        </div>
+    </div>
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/">首页</a></li>
+        
+          <li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li>
+        
+          <li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li>
+        
+          <li><a href="/about/">关于</a></li>
+        
+          <li><a href="/tags/">标签</a></li>
+        
+          <li><a href="/categories/">分类</a></li>
+        
+          <li><a href="/archives/">归档</a></li>
+        
+          <li><a href="/atom.xml">RSS</a></li>
+        
+          <li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E8%85%BE%E8%AE%AF%E4%BA%91%E5%85%A8%E7%90%83%E6%80%A7%E6%95%85%E9%9A%9C-74-%E5%88%86%E9%92%9F"><span class="toc-number">1.</span> <span class="toc-text">1 腾讯云全球性故障 74 分钟</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-%E7%88%B1%E5%B0%94%E5%85%B0%E7%9A%84%E7%94%B5%E5%8A%9B%E7%B4%A7%E7%BC%A9%E5%8F%AF%E8%83%BD%E4%BF%83%E4%BD%BFAWS%E5%AF%B9%E8%AE%A1%E7%AE%97%E8%B5%84%E6%BA%90%E8%BF%9B%E8%A1%8C%E9%85%8D%E7%BB%99"><span class="toc-number">2.</span> <span class="toc-text">2 爱尔兰的电力紧缩可能促使AWS对计算资源进行配给</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%80%9D%E7%A7%91%E5%AE%A3%E5%B8%83%E5%AE%8C%E6%88%90%E5%AF%B9Splunk%E7%9A%84%E6%94%B6%E8%B4%AD"><span class="toc-number">3.</span> <span class="toc-text">3 思科宣布完成对Splunk的收购</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-Google-One-VPN-%E6%9C%8D%E5%8A%A1%E5%8D%B3%E5%B0%86%E8%B5%B0%E5%90%91-Google-%E7%9A%84%E5%9D%9F%E5%9C%BA"><span class="toc-number">4.</span> <span class="toc-text">4 Google One VPN 服务即将走向 Google 的坟场</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-APT-2-9-%E5%8F%91%E5%B8%83%EF%BC%9ADebian-%E7%9A%84-APT-3-0-%E5%B0%86%E6%8B%A5%E6%9C%89%E5%B8%A6%E6%9C%89%E9%A2%9C%E8%89%B2%E3%80%81%E6%9F%B1%E5%BC%8F%E6%98%BE%E7%A4%BA%E7%AD%89%E7%9A%84%E6%96%B0-UI"><span class="toc-number">5.</span> <span class="toc-text">5 APT 2.9 发布：Debian 的 APT 3.0 将拥有带有颜色、柱式显示等的新 UI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-%E9%A6%96%E9%83%A8%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E7%94%9F%E6%88%90%E7%9A%84%E6%B5%AA%E6%BC%AB%E5%96%9C%E5%89%A7%E7%94%B5%E5%BD%B1%E5%B0%86%E4%BA%8E%E4%BB%8A%E5%B9%B4%E5%A4%8F%E5%A4%A9%E4%B8%8A%E6%98%A0%E2%80%94%E2%80%94%E9%A2%84%E5%91%8A%E7%89%87%E7%AE%80%E7%9B%B4%E8%AE%A9%E9%9C%8D%E5%B0%94%E9%A9%AC%E5%85%8B%E9%A2%91%E9%81%93%E6%97%A0%E5%9C%B0%E8%87%AA%E5%AE%B9"><span class="toc-number">6.</span> <span class="toc-text">6 首部人工智能生成的浪漫喜剧电影将于今年夏天上映——预告片简直让霍尔马克频道无地自容</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-%E7%94%B1%E4%BA%8E%E7%BE%8E%E5%9B%BD%E7%9A%84%E5%88%B6%E8%A3%81%EF%BC%8C%E4%B8%AD%E5%9B%BD%E6%B8%B8%E6%88%8F%E7%8E%A9%E5%AE%B6%E5%8F%AF%E8%83%BD%E6%97%A0%E6%B3%95%E5%AF%B9RTX-4090%E6%98%BE%E5%8D%A1%E8%BF%9B%E8%A1%8CRMA%EF%BC%88%E5%95%86%E5%93%81%E9%80%80%E8%B4%A7%E6%8E%88%E6%9D%83%EF%BC%89%E6%9C%8D%E5%8A%A1"><span class="toc-number">7.</span> <span class="toc-text">7 由于美国的制裁，中国游戏玩家可能无法对RTX 4090显卡进行RMA（商品退货授权）服务</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-%E8%8A%AF%E7%89%87%E5%88%B6%E9%80%A0%E5%95%86%E6%AD%A3%E4%B8%93%E6%B3%A8%E4%BA%8E%E8%BE%B9%E7%BC%98%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%EF%BC%88Edge-AI%EF%BC%89%E7%9A%84%E5%8F%91%E5%B1%95"><span class="toc-number">8.</span> <span class="toc-text">8 芯片制造商正专注于边缘人工智能（Edge AI）的发展</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-%E9%A2%84%E8%AE%A1%E5%9C%A82025%E5%B9%B4%EF%BC%8CSD%E5%8D%A1%E7%9A%84%E5%AE%B9%E9%87%8F%E6%9C%80%E7%BB%88%E8%BE%BE%E5%88%B04TB"><span class="toc-number">9.</span> <span class="toc-text">9 预计在2025年，SD卡的容量最终达到4TB</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-%E2%80%9C%E8%83%BD%E5%8A%9B%E9%AB%98%E8%B6%85%E2%80%9D%E7%9A%84%E9%BB%91%E5%AE%A2%E5%88%A9%E7%94%A8%E9%98%B2%E7%81%AB%E5%A2%990-day%E6%BC%8F%E6%B4%9E%E5%85%A5%E4%BE%B5%E4%BC%81%E4%B8%9A%E7%BD%91%E7%BB%9C"><span class="toc-number">10.</span> <span class="toc-text">10 “能力高超”的黑客利用防火墙0-day漏洞入侵企业网络</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-%E6%96%B0%E5%9E%8BRhadamanthys%E6%94%BB%E5%87%BB%E6%B4%BB%E5%8A%A8%E4%B8%AD%E7%96%91%E4%BC%BC%E4%BD%BF%E7%94%A8AI%E7%94%9F%E6%88%90%E4%BB%A3%E7%A0%81"><span class="toc-number">11.</span> <span class="toc-text">11 新型Rhadamanthys攻击活动中疑似使用AI生成代码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-%E8%B0%B7%E6%AD%8C%E7%9A%8490%E5%A4%A9TLS%E8%AF%81%E4%B9%A6%E6%9C%89%E6%95%88%E6%9C%9F%E6%8F%90%E6%A1%88%E5%B0%86%E5%A6%82%E4%BD%95%E5%BD%B1%E5%93%8D%E4%BC%81%E4%B8%9A"><span class="toc-number">12.</span> <span class="toc-text">12 谷歌的90天TLS证书有效期提案将如何影响企业</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://weekly.linuxcat.top/articles/2024-04/index.html"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://weekly.linuxcat.top/articles/2024-04/index.html&text=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://weekly.linuxcat.top/articles/2024-04/index.html&title=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://weekly.linuxcat.top/articles/2024-04/index.html&is_video=false&description=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟&body=Check out this article: https://weekly.linuxcat.top/articles/2024-04/index.html"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://weekly.linuxcat.top/articles/2024-04/index.html&title=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://weekly.linuxcat.top/articles/2024-04/index.html&title=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://weekly.linuxcat.top/articles/2024-04/index.html&title=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://weekly.linuxcat.top/articles/2024-04/index.html&title=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://weekly.linuxcat.top/articles/2024-04/index.html&name=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://weekly.linuxcat.top/articles/2024-04/index.html&t=Linuxcat周刊(第4期) 腾讯云全球性故障 74 分钟"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> 菜单</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> 目录</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> 分享</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> 返回顶部</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2024
+    mei
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/">首页</a></li><!--
+     --><!--
+       --><li><a href="/categories/Linuxcat%E5%91%A8%E5%88%8A/">周刊</a></li><!--
+     --><!--
+       --><li><a href="/categories/%E6%96%B0%E9%97%BB/">新闻</a></li><!--
+     --><!--
+       --><li><a href="/about/">关于</a></li><!--
+     --><!--
+       --><li><a href="/tags/">标签</a></li><!--
+     --><!--
+       --><li><a href="/categories/">分类</a></li><!--
+     --><!--
+       --><li><a href="/archives/">归档</a></li><!--
+     --><!--
+       --><li><a href="/atom.xml">RSS</a></li><!--
+     --><!--
+       --><li><a target="_blank" rel="noopener" href="https://github.com/ssdomei232/weekly">项目</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="/assets/css/font-awesome.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdn.jsdmirror.com/npm/jquery@3.6.0/dist/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdn.jsdmirror.com/npm/clipboard@2.0.7/dist/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"复制到粘贴板！\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "复制成功！");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+<!-- utterances Comments -->
+
+    <script type="text/javascript">
+      var utterances_repo = 'ssdomei232/weekly';
+      var utterances_issue_term = 'pathname';
+      var utterances_label = 'Comment';
+      var utterances_theme = 'github-light';
+
+      (function(){
+          var script = document.createElement('script');
+
+          script.src = 'https://utteranc.es/client.js';
+          script.setAttribute('repo', utterances_repo);
+          script.setAttribute('issue-term', 'pathname');
+          script.setAttribute('label', utterances_label);
+          script.setAttribute('theme', utterances_theme);
+          script.setAttribute('crossorigin', 'anonymous');
+          script.async = true;
+          (document.getElementById('utterances_thread')).appendChild(script);
+      }());
+  </script>
+
+</body>
+</html>
