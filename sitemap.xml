@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://weekly.linuxcat.top/articles/2024-10/index.html</loc>
+    
+    <lastmod>2024-07-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://weekly.linuxcat.top/2024-fool/index.html</loc>
     
     <lastmod>2024-07-04</lastmod>
@@ -94,7 +103,7 @@
 
   <url>
     <loc>https://weekly.linuxcat.top/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -102,189 +111,217 @@
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/AI/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/Linux/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/Redis/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/Garnet/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/Gemini/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/%E7%9F%A5%E4%B9%8E/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/%E7%88%AC%E8%99%AB/</loc>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/Cloudflare/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://weekly.linuxcat.top/tags/Apple/</loc>
-    <lastmod>2024-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://weekly.linuxcat.top/tags/Google/</loc>
-    <lastmod>2024-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://weekly.linuxcat.top/tags/PCDN/</loc>
-    <lastmod>2024-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://weekly.linuxcat.top/tags/GPT-4/</loc>
-    <lastmod>2024-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://weekly.linuxcat.top/tags/OpenAI/</loc>
-    <lastmod>2024-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://weekly.linuxcat.top/tags/Telegram/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <loc>https://weekly.linuxcat.top/tags/%E8%BD%AF%E7%9B%98/</loc>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/%E9%80%9A%E8%AE%AF/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/5G/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/AI%E5%AE%89%E5%85%A8/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/XZ/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://weekly.linuxcat.top/tags/%E5%AD%98%E5%82%A8/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <loc>https://weekly.linuxcat.top/tags/Apple/</loc>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://weekly.linuxcat.top/tags/%E8%B0%B7%E6%AD%8C/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <loc>https://weekly.linuxcat.top/tags/Google/</loc>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://weekly.linuxcat.top/tags/Bing/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <loc>https://weekly.linuxcat.top/tags/PCDN/</loc>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://weekly.linuxcat.top/tags/Docker/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <loc>https://weekly.linuxcat.top/tags/GPT-4/</loc>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://weekly.linuxcat.top/tags/GFW/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <loc>https://weekly.linuxcat.top/tags/OpenAI/</loc>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://weekly.linuxcat.top/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
-    <lastmod>2024-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://weekly.linuxcat.top/tags/%E9%98%B2%E7%81%AB%E5%A2%99/</loc>
-    <lastmod>2024-07-04</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://weekly.linuxcat.top/tags/TLS%E8%AF%81%E4%B9%A6/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <loc>https://weekly.linuxcat.top/tags/Telegram/</loc>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/IBM/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://weekly.linuxcat.top/tags/%E6%84%9A%E4%BA%BA%E8%8A%82/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <loc>https://weekly.linuxcat.top/tags/%E5%AD%98%E5%82%A8/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/%E8%B0%B7%E6%AD%8C/</loc>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://weekly.linuxcat.top/tags/jsDelivr/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/Bing/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/Docker/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/GFW/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/%E6%84%9A%E4%BA%BA%E8%8A%82/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/%E4%BA%91%E6%9C%8D%E5%8A%A1/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/%E9%98%B2%E7%81%AB%E5%A2%99/</loc>
+    <lastmod>2024-07-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://weekly.linuxcat.top/tags/TLS%E8%AF%81%E4%B9%A6/</loc>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -293,7 +330,7 @@
   
   <url>
     <loc>https://weekly.linuxcat.top/categories/Linuxcat%E5%91%A8%E5%88%8A/</loc>
-    <lastmod>2024-07-04</lastmod>
+    <lastmod>2024-07-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
