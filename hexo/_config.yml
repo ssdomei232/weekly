@@ -4,7 +4,7 @@
 
 # Site
 title: Linuxcat周刊
-subtitle: ''
+subtitle: 'Linuxcat周刊'
 description: '继Linux中国后,提供不那么及时的Linux,开源,软件,科技相关的新闻摘要,不定期发布'
 keywords: Linuxcat周刊,Linux,开源,软件,科技
 author: mei
@@ -13,7 +13,7 @@ timezone: 'Asia/Shanghai'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://ssdomei232.github.io
+url: https://weekly.linuxcat.top
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: true
+post_asset_folder: false
 relative_link: false
 future: true
 highlight:
@@ -95,16 +95,29 @@ exclude:
 ignore:
 
 # Extensions
-Plugins: 
-  hexo-generator-feed
-#Feed Atom
-feed:
-  type: feed
-  path: feed.xml
-  limit: 20
-
+## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: fluid
+theme: cactus
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
+deploy:
+  type: git
+  repository: https://github.com/ssdomei232/weekly.git
+  branch: gh-pages
+
+menu:
+  home: / || home
+  #about: /about/ || user
+  tags: /tags/ || tags
+  categories: /categories/ || th
+  archives: /archives/ || archive
+  #schedule: /schedule/ || calendar
+  sitemap: /sitemap.xml || sitemap
+  #commonweal: /404/ || heartbeat
+
+#订阅RSS
+feed:
+  type: atom
+  path: atom.xml
+  limit: false

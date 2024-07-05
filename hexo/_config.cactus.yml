@@ -1,0 +1,212 @@
+##############################################################################
+# 内容
+##############################################################################
+
+# 链接到一个页面，该页面提供了所有项目的概述。
+# 这可以是外部链接（例如，指向您的 GitHub 个人资料）或其它的地方
+# 页面
+projects_url: https://github.com/ssdomei232/weekly
+
+# 将页面方向设置为 RTL 或 LTR。默认为 LTR（如果设置为 "rtl"，则将加载 "vazir "字体）。
+direction: ltr
+# 配置导航菜单。
+# 一对 "Key: url "将产生一个指向 "url "的链接，其名称为 "Key"。
+# 导航菜单。您还可以选择为导航菜单中的 "key "添加翻译。
+# languages/*.yml
+nav:
+  home: /
+  周刊: /categories/Linuxcat周刊/
+  新闻: /categories/新闻/
+  about: /about/
+  标签: /tags/
+  分类: /categories/
+  articles: /archives/
+  RSS: /atom.xml
+  projects: https://github.com/ssdomei232/weekly
+
+
+# 社交媒体账户链接。
+# "图标 "键应对应于 Fontawesome 图标名称
+# （见 https://fontawesome.com/icons?d=gallery&s=brands）；
+# 只有 "邮件 "是个例外。
+# 你可以选择添加一个 "label "键来设置链接的标题属性。
+# 当缺少 "label "时，"icon "值将被用作标题。
+social_links:
+  -
+    icon: github
+    link: https://github.com/ssdomei232/weekly
+  # -
+  #   icon: twitter
+  #   link: /
+  -
+    icon: mail
+    link: mailto:i@mmeiblog.cne
+
+# 自定义概览，在索引页面显示标签云。
+# 选项：https://hexo.io/docs/helpers.html#tagcloud
+tags_overview: false
+
+# 自定义索引页面上最新博文的概览。
+# 选项：
+# - show_all_posts：是否显示所有可用的帖子。
+# - post_count：是否只显示 x 个最新博文。
+# - sort_updated：按照最后修改日期而不是创建日期对文章进行排序。
+posts_overview:
+  show_all_posts: true
+  sort_updated: false
+
+# 自定义归档视图。
+# 选项：
+# - sort_updated：按最后修改日期而不是创建日期对文章进行排序。
+# 注意：这不能与分页一起使用，因为分页
+# 插件会按创建日期对页面进行排序。
+archive:
+  sort_updated: false
+
+# 自定义文章视图。
+# 选项：
+# - show_updated：显示最后修改日期。
+post:
+  show_updated: false
+
+# 自定义版权年
+# 注意：如果未提供 start_year/end_year，将使用当前年份。
+copyright:
+  start_year: 2024
+  end_year:
+
+# 自定义 404 页面
+# 选项：
+# - enabled：是否启用 404 页面 (404.html)。
+error_404:
+  enabled: true
+  title: "404 Page Not Found"
+  description: "The page you are looking for might have been removed, had its name changed, or is temporarily unavailable."
+
+
+##############################################################################
+# 外观
+##############################################################################
+
+# 自定义页眉中的徽标（即仙人掌）。
+# 选项：
+# - enabled：显示（true）或隐藏（false）徽标。
+# - 宽度：徽标的宽度，以像素为单位
+# - height：徽标高度，以像素为单位
+# - url：可以找到徽标的位置
+# - gravatar：是否使用您的 Gravatar 作为徽标
+# - grayout：是否启用徽标的悬停效果
+logo:
+  enabled: false
+  width: 50
+  height: 50
+  url: /images/logo.png
+  gravatar: false
+  grayout: false
+
+# 自定义收藏夹图标。
+# 仙人掌支持三种最重要的图标：
+# - 桌面： 经典的 favion.ico 文件。
+# - 安卓： 一个 192x192 的 PNG 文件。
+# - 苹果：  一个 180x180 的 PNG 文件。
+# 可使用 http://realfavicongenerator.net/ 生成这些文件。
+# 选项：
+# - url：图标的位置
+# - gravatar：是否从你的 Gravatar 创建图标
+favicon:
+  desktop:
+    url: /images/favicon.ico
+    gravatar: false
+  android:
+    url: /images/favicon.ico
+    gravatar: false
+  apple:
+    url: /images/favicon.ico
+    gravatar: false
+
+# 用于突出显示代码块的配色方案。
+# 所有可用配色方案的列表请参见 source/css/_highlight。
+# highlight: rainbow
+
+# 设置配色方案。
+# 可用的配色方案有 "dark"、"light"、"classic "和 "white"。
+# 或者，也可以在 source/css/_colors 中添加自己的自定义配色方案。
+colorscheme: light
+
+# 以 rem 为单位的页面最大宽度。
+page_width: 48
+
+
+##############################################################################
+# 杂项
+##############################################################################
+
+# RSS 订阅
+rss: true
+
+# 将网页转化为图形对象（参见 http://ogp.me）。
+open_graph:
+  fb_app_id:
+  fb_admins:
+  twitter_id:
+  google_plus:
+
+
+##############################################################################
+# 插件
+##############################################################################
+
+# 为 Latex 启用 MathJax 支持
+mathjax:
+  enabled: false
+
+# 填写您的 Disqus 评论简称，启用 Disqus 评论。
+disqus:
+  enabled: false
+  shortname: cactus-1
+
+# 填写 "utterances "数据以启用 "utterances "评论
+utterances:
+  enabled: true
+  repo: ssdomei232/weekly
+  issue_term: pathname
+  label: Comment
+  theme: github-light
+
+# Fill in your Google Analytics tracking ID to enable Google Analytics.
+google_analytics:
+  enabled: false
+  id: UA-86660611-1
+
+# Fill in your Baidu Analytics tracking ID to enable Baidu Analytics.
+baidu_analytics:
+  enabled: false
+  id: 2e6da3c375c8a87f5b664cea6d4cb29c
+
+# Fill in your Cloudflare Analytics tracking ID to enable Cloudflare Analytics.
+cloudflare_analytics:
+  enabled: false
+  id: 0dabb6e21848405483a237e6a7b6ed04
+
+# Fill in your Umami Analytics tracking ID to enable Umami Analytics.
+umami_analytics:
+  enabled: false
+  id: e77e68be-f6e4-4br3-9365-2b76b57cd571
+  host: https://analytics.domain.com
+  script_name: umami.js
+
+# 如果您想使用您的头像作为网站的徽标和/或收藏夹，请填写您的头像电子邮件或哈希值。
+# 徽标和/或网站收藏夹。
+# 生成哈希值： `echo -n "name@email.com" | md5`. | md5`.
+gravatar:
+  email: i@mmeiblog.cn
+  hash: d41d8cd98f00b204e9800998ecf8427e
+
+# 从 CDN 加载库和样式，而不是依赖本地文件
+cdn:
+  enable: true
+  jquery: https://cdn.jsdmirror.com/npm/jquery@3.6.0/dist/jquery.min.js
+  clipboard: https://cdn.jsdmirror.com/npm/clipboard@2.0.7/dist/clipboard.min.js
+  font_awesome: /assets/css/font-awesome.min.css
+  justified_gallery_css: https://cdn.jsdmirror.com/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css
+  justified_gallery_js: https://cdn.jsdmirror.com/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js
