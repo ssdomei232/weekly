@@ -4,7 +4,7 @@ tags:
 - 愚人节
 categories: 
 - Linuxcat周刊
-permalink: /2024-fool/index.html
+permalink: /weekly/2024-fool/index.html
 date: 2024-4-1 12:00:00
 ---
 
@@ -13,7 +13,7 @@ date: 2024-4-1 12:00:00
 ## 1 雷蛇发布新款电竞椅：自带八条人工智能触手
 4月1日，雷蛇发新款电竞椅——克苏鲁。拥有8个人工智能触手，可满足玩家的一切需求：按摩、进食、刮胡子、甚至是AI代打。雷蛇官方表示“可以保证触手总是有96.9%的概率听你的”。   
 8个AI 人工智能触手，满足各种需求！享受终极舒适，终极支援！Gamer一旦坐上就无法离开的终极座椅！   
-![雷蛇新款电竞椅](/docs/assets/2024/fool/leishe.jpg "雷蛇新款电竞椅")
+![雷蛇新款电竞椅](/img/weekly/2024/fool/leishe.jpg "雷蛇新款电竞椅")
 > 消息来源: [游民星空](https://www.gamersky.com/news/202404/1727485.shtml)
 
 
