@@ -6,6 +6,7 @@
 
 
 ## 往期内容
+[#12 Crowdstrike 更新导致全球 Windows 大面积蓝屏死机](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-12.md)            
 [#11 OPENAI 提出人工智能“达到人类智能”的五级标准，自认接近第二级](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-11.md)        
 [#10 知乎故意使用乱码干扰必应/谷歌等爬虫](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-10.md)        
 [#9 CSDN旗下的GitCode正在批量搬运Github开源项目并为开发者创建主页](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-9.md)        
