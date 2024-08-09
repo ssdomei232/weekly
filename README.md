@@ -6,6 +6,7 @@
 
 
 ## 往期内容
+[#14 0.0.0.0 Day漏洞曝光，谷歌、Safari、火狐等主流浏览器面临威胁](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-14.md)        
 [#13 俄机构提议屏蔽关于VPN服务的科技信息](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-13.md)        
 [#12 Crowdstrike 更新导致全球 Windows 大面积蓝屏死机](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-12.md)            
 [#11 OPENAI 提出人工智能“达到人类智能”的五级标准，自认接近第二级](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-11.md)        
