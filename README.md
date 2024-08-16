@@ -1,11 +1,13 @@
 # Linuxcat周刊
 继Linux中国后,提供不那么及时的Linux,开源,软件,科技相关的新闻摘要   
 不定时发布   
+由于部分内容较为敏感,请自行在文件中想办法查看(很简单)   
 
 提交和格式请阅读[Howto.md](https://github.com/ssdomei232/Linux-weekly/blob/master/Howto.md)   
 
 
 ## 往期内容
+[#15 开源下载器开发者被跨省，因被用于诈骗](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-15.md)       
 [#14 0.0.0.0 Day漏洞曝光，谷歌、Safari、火狐等主流浏览器面临威胁](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-14.md)        
 [#13 俄机构提议屏蔽关于VPN服务的科技信息](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-13.md)        
 [#12 Crowdstrike 更新导致全球 Windows 大面积蓝屏死机](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-12.md)            
