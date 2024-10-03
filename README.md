@@ -7,6 +7,7 @@
 
 
 ## 往期内容
+[#18 哈佛大学学生改造 Meta 智能眼镜：添加面部识别功能 可联网搜索姓名](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-18.md)        
 [#17 Docker官方安装脚本以及镜像拉取 已被解封](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-17.md)        
 [#16 Litespeed Cache 漏洞导致数百万 WordPress 网站暴露在攻击之下](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-16.md)        
 [#15 开源下载器开发者被跨省，因被用于诈骗](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-15.md)       
