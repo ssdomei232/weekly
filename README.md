@@ -12,7 +12,7 @@
 [#16 Litespeed Cache 漏洞导致数百万 WordPress 网站暴露在攻击之下](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-16.md)        
 [#15 开源下载器开发者被跨省，因被用于诈骗](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-15.md)       
 [#14 0.0.0.0 Day漏洞曝光，谷歌、Safari、火狐等主流浏览器面临威胁](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-14.md)        
-[#13 俄机构提议屏蔽关于VPN服务的科技信息](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-13.md)        
+[#13 黑客或正利用 AI 技术窥探电脑屏幕，新模型可利用 HDMI 线盗取信息](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-13.md)        
 [#12 Crowdstrike 更新导致全球 Windows 大面积蓝屏死机](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-12.md)            
 [#11 OPENAI 提出人工智能“达到人类智能”的五级标准，自认接近第二级](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-11.md)        
 [#10 知乎故意使用乱码干扰必应/谷歌等爬虫](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-10.md)        
