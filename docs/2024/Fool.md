@@ -4,6 +4,8 @@ tags:
 - 愚人节
 categories: 
 - Linuxcat周刊
+index_img: /img/2024/fool/leishe.jpg
+banner_img: /img/2024/fool/leishe.jpg
 permalink: /weekly/2024-fool/index.html
 date: 2024-4-1 12:00:00
 ---
