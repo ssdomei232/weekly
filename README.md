@@ -7,6 +7,7 @@
 
 
 ## 往期内容
+[#21 OpenAI前"AGI准备"负责人表示AI即将能够完成在计算机上人类能做的任何事情](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-21.md)          
 [#20 Linus Torvalds 确认俄罗斯维护者被移除](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-20.md)          
 [#19 苹果研究员质疑大语言模型（LLM）的推理能力，认为其仅是复杂的模式匹配](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-19.md)            
 [#18 哈佛大学学生改造 Meta 智能眼镜：添加面部识别功能 可联网搜索姓名](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-18.md)        
