@@ -7,6 +7,7 @@
 
 
 ## 往期内容
+[#22 AI游戏提示词防护被绕过，挑战者获5万美元奖金](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-22.md)          
 [#21 OpenAI前"AGI准备"负责人表示AI即将能够完成在计算机上人类能做的任何事情](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-21.md)          
 [#20 Linus Torvalds 确认俄罗斯维护者被移除](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-20.md)          
 [#19 苹果研究员质疑大语言模型（LLM）的推理能力，认为其仅是复杂的模式匹配](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-19.md)            
