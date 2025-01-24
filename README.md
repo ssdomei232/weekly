@@ -7,6 +7,7 @@
 
 
 ## 往期内容
+[#26 MIT科技评论：中美AI军备竞赛没有赢家](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-2.md)   
 [#25 马斯克同意我们已经耗尽了AI训练数据](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-1.md)   
 [#24 AI 叛乱打响第一枪？Anthropic 最新论文作者齐聚紧急会议：模型“伪装顺从”，暗中对抗训练](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-24.md)   
 [#23 文生视频模型 Sora 正式发布](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2024/2024-23.md)   
