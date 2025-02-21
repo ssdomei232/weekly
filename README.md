@@ -10,6 +10,7 @@
 
 **二月**
 
+- 第 29 期：[COBOL 留下的烂摊子](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-5.md)
 - 第 28 期：[DeepSeek 带来的影响](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-4.md)
 
 **一月**
