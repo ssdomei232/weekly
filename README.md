@@ -2,11 +2,12 @@
 
 继Linux中国后,提供不那么及时的Linux,开源,软件,科技相关的新闻摘要
 不定时发布
-由于部分内容较为敏感,请自行在文件中想办法查看(很简单)
-
-提交和格式请阅读[Howto.md](https://github.com/ssdomei232/Linux-weekly/blob/master/Howto.md)
 
 ## 2025
+
+**三月**
+
+- 第 30 期：[EA 开源包括红警在内的四款《命令与征服》经典游戏](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-6.md)
 
 **二月**
 
