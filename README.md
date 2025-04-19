@@ -5,6 +5,11 @@
 
 ## 2025
 
+**四月**
+
+- 第 33 期: [SSL/TLS 证书最长有效期将大幅缩短至47天](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-9.md)
+- 第 32 期: [谷歌将从下周开始完全闭门开发安卓操作系统](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-8.md)
+
 **三月**
 
 - 第 31 期：[微软将停止对旧版 Windows 远程桌面应用](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-7.md)
