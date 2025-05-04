@@ -5,6 +5,10 @@
 
 ## 2025
 
+**五月**
+
+- 第 34 期：[微软30%代码由AI生成，Meta计划明年半数AI模型由AI开发](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-10.md)
+
 **四月**
 
 - 第 33 期: [SSL/TLS 证书最长有效期将大幅缩短至47天](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-9.md)
