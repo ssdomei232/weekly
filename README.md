@@ -7,6 +7,7 @@
 
 **五月**
 
+- 第 35 期: [微软大规模裁员6000+人，Faster CPython team 仅剩两人](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-11.md)
 - 第 34 期：[微软30%代码由AI生成，Meta计划明年半数AI模型由AI开发](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-10.md)
 
 **四月**
