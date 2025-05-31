@@ -7,6 +7,7 @@
 
 **五月**
 
+- 第 36 期: [研究发现 AI 会用尽手段维系自身"生存"，包括直接勒索人类](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-12.md)
 - 第 35 期: [微软大规模裁员6000+人，Faster CPython team 仅剩两人](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-11.md)
 - 第 34 期：[微软30%代码由AI生成，Meta计划明年半数AI模型由AI开发](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-10.md)
 
