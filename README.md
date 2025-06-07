@@ -5,6 +5,10 @@
 
 ## 2025
 
+**六月**
+
+- 第 37 期: [AI独角兽Builder.ai破产，实为700名印度工程师“伪装AI”运作](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-13.md)
+
 **五月**
 
 - 第 36 期: [研究发现 AI 会用尽手段维系自身"生存"，包括直接勒索人类](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-12.md)
