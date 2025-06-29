@@ -7,6 +7,7 @@
 
 **六月**
 
+- 第 39 期: [AI 助力更好地理解基因组](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-15.md)
 - 第 38 期: [智能手机占全球网页流量64%，创历史新高](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-14.md)
 - 第 37 期: [AI独角兽Builder.ai破产，实为700名印度工程师“伪装AI”运作](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-13.md)
 
