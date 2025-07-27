@@ -1,9 +1,14 @@
 # Linuxcat周刊
 
 继Linux中国后,提供不那么及时的Linux,开源,软件,科技相关的新闻摘要  
-每两周六发布
+每周六发布
 
 ## 2025
+
+**七月**
+
+- 第 41 期: [Anthropic研究发现AI反常现象：思考时间越长模型表现越差](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-17.md)
+- 第 40 期: [亚马逊仓库机器人数量首次接近人类员工](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-16.md)
 
 **六月**
 
