@@ -5,6 +5,10 @@
 
 ## 2025
 
+**八月**
+
+- 第 42 期: [Windows 10 迎来十周年，将于明年停止支持](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-18.md)
+
 **七月**
 
 - 第 41 期: [Anthropic研究发现AI反常现象：思考时间越长模型表现越差](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-17.md)
