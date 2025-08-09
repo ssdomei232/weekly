@@ -7,6 +7,7 @@
 
 **八月**
 
+- 第 43 期: [量子计算机首次实现生成“认证的真正随机”数字](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-19.md)
 - 第 42 期: [Windows 10 迎来十周年，将于明年停止支持](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-18.md)
 
 **七月**
