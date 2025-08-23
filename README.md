@@ -7,6 +7,7 @@
 
 **八月**
 
+- 第 45 期: [“疯狂阴谋论者”与“失控喜剧人”：Grok的AI人格指令被曝光](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-21.md)
 - 第 44 期: [ChatGPT 的谄媚与即兴表演能让心智健全的人相信自己是超级英雄](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-20.md)
 - 第 43 期: [量子计算机首次实现生成“认证的真正随机”数字](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-19.md)
 - 第 42 期: [Windows 10 迎来十周年，将于明年停止支持](https://github.com/ssdomei232/Linux-weekly/blob/main/docs/2025/2025-18.md)
